@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-itunes-app" content="app-id=6818637465">
+<title>Queer TV airing now: new episodes through March 2027</title>
+<meta name="description" content="43 TV shows with queer women, non-binary and trans characters have new episodes coming through March 2027, 11 of them season premieres. No spoilers.">
+<link rel="canonical" href="https://queerframe.app/airing/">
+<link rel="icon" href="https://queerframe.app/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Queer Frame">
+<meta property="og:title" content="Queer TV airing now: new episodes through March 2027">
+<meta property="og:description" content="43 TV shows with queer women, non-binary and trans characters have new episodes coming through March 2027, 11 of them season premieres. No spoilers.">
+<meta property="og:url" content="https://queerframe.app/airing/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<style>
+  /* Queer Frame's identity (DECISIONS 0038): the app icon's aubergine and
+     coral, its diagonal split as the one motif, a condensed display face for
+     titles. System fonts only, nothing loaded. Every text pair is held to
+     WCAG AA in both schemes by tests/test_site_identity.py. */
+  :root {
+    color-scheme: light dark;
+    --paper: #f6f1fa; --surface: #ece3f4; --ink: #2b1740; --muted: #5e4a6e;
+    --link: #6a2c9c; --visited: #8b2a63; --coral: #ff6f4f; --coral-text: #b8381c;
+    --seal: #2b1740; --on-seal: #fbf3ee; --seal-corner: #ff6f4f; --line: #2b1740; --focus: #b8381c; --mark-edge: transparent;
+    --display: "Avenir Next Condensed", "Roboto Condensed", "Arial Narrow", sans-serif-condensed, system-ui, sans-serif;
+    --text: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1027; --surface: #2a1a37; --ink: #f3ecf7; --muted: #cdb8d8;
+      --link: #d9b8ff; --visited: #f2a6d4; --coral: #ff8a6b; --coral-text: #ff8a6b;
+      --seal: #ff8a6b; --on-seal: #1d1027; --seal-corner: #5a2d7a; --line: #cdb8d8; --focus: #ff8a6b; --mark-edge: #cdb8d8;
+    }
+  }
+  body { margin: 0 auto; max-width: 42rem; padding: 0 1rem 3rem; background: var(--paper); color: var(--ink); font: 1.0625rem/1.55 var(--text); overflow-wrap: break-word; }
+  a { color: var(--link); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+  a:visited { color: var(--visited); }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { position: static; display: inline-block; padding: 0.5rem 0; }
+  header { padding: 1rem 0 0.75rem; border-bottom: 3px solid var(--line); }
+  .masthead { display: flex; align-items: center; gap: 0.625rem; }
+  .mark { flex: none; width: 2rem; height: 2rem; border-radius: 7px; box-shadow: 0 0 0 1px var(--mark-edge); }
+  .brand { margin: 0; font: 800 1.375rem/1 var(--display); letter-spacing: 0.01em; }
+  .brand a, .brand a:visited { color: var(--ink); text-decoration: none; display: inline-block; padding: 0.5rem 0; }
+  .brand a:hover { text-decoration: underline; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0.25rem 0 0; padding: 0; list-style: none; font-size: 0.9375rem; color: var(--muted); }
+  .crumbs li + li::before { content: "/"; margin-right: 0.5rem; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; }
+  h1 { font-size: clamp(2rem, 1.35rem + 3vw, 2.875rem); line-height: 1.04; letter-spacing: -0.005em; margin: 1.5rem 0 0.75rem; }
+  h2 { font-size: 1.5rem; line-height: 1.15; margin: 2.25rem 0 0.5rem; }
+  h3 { font-size: 1.25rem; margin: 1.5rem 0 0.25rem; }
+  .opening, .lede { font-size: 1.1875rem; }
+  dl.facts { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr); gap: 0.25rem 1rem; margin: 0; }
+  dl.facts dt { font-weight: 700; color: var(--muted); }
+  dl.facts dd { margin: 0; overflow-wrap: anywhere; }
+  @media (max-width: 30rem) {
+    dl.facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    dl.facts dd { margin-bottom: 0.5rem; }
+  }
+  /* The one bold element: the sealed answer. Closed, only the summary bar is
+     drawn; nothing here changes what a closed details element renders. */
+  .spoiler-warning { margin: 1.75rem 0 0; }
+  details.answer { margin: 0.5rem 0 1.5rem; border: 3px solid var(--seal); border-radius: 0.375rem; background: var(--paper); }
+  details.answer summary { cursor: pointer; padding: 0.875rem 3rem 0.875rem 1rem; min-height: 44px; box-sizing: border-box; font: 800 1.25rem/1.2 var(--display); background: linear-gradient(225deg, var(--seal-corner) 0 1.5rem, transparent 1.5rem) var(--seal); color: var(--on-seal); }
+  details.answer summary::marker { color: var(--on-seal); }
+  details[open].answer summary { border-bottom: 3px solid var(--seal); }
+  .answer-body { padding: 0.25rem 1rem 1rem; }
+  .answer-body ul { padding-left: 1.25rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    details[open].answer .answer-body { animation: qf-reveal 180ms ease-out; }
+    @keyframes qf-reveal { from { opacity: 0; } to { opacity: 1; } }
+  }
+  /* The character question blocks (DECISIONS 0051). The "Show all" control
+     is a plain closed details element; nothing here styles its content. */
+  .character-questions { margin: 0 0 1.25rem; }
+  .character-questions h3 { margin: 1rem 0 0.125rem; }
+  .character-questions p { margin: 0 0 0.5rem; }
+  details.more-characters { margin: 1rem 0 1.5rem; }
+  details.more-characters summary { cursor: pointer; min-height: 44px; box-sizing: border-box; padding: 0.625rem 1rem; border: 2px solid var(--line); border-radius: 0.25rem; font: 800 1.125rem/1.2 var(--display); }
+  details.more-characters summary:hover { background: var(--surface); }
+  .next-episode { margin: 1.5rem 0 0; }
+  .cast { padding-left: 1.25rem; }
+  .cast li { margin-bottom: 0.5rem; }
+  .small { font-size: 0.9375rem; }
+  .app-soon { margin: 1.5rem 0; padding: 0.75rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); font-weight: 700; }
+  .more, .similar { padding-left: 1.25rem; }
+  .more li, .similar li { margin-bottom: 0.5rem; }
+  footer { margin-top: 3rem; padding: 0.25rem 1rem 1rem; border-top: 3px solid var(--line); background: var(--surface); color: var(--muted); font-size: 0.9375rem; }
+  footer h2 { font-size: 1.125rem; color: var(--ink); }
+  footer li { margin-bottom: 0.5rem; }
+  .letters { display: flex; flex-wrap: wrap; gap: 0.375rem; margin: 0.5rem 0 0; padding: 0; list-style: none; }
+  .letters a { display: inline-block; min-width: 44px; min-height: 44px; line-height: 40px; box-sizing: border-box; text-align: center; border: 2px solid var(--line); border-radius: 0.25rem; font: 800 1.125rem/40px var(--display); text-decoration: none; }
+  .letters a:hover { background: var(--surface); }
+  .shows { padding-left: 1.25rem; }
+  .shows li { margin-bottom: 0.375rem; }
+  .go { margin: 1rem 0; padding: 0; list-style: none; }
+  .go li { margin-bottom: 0.5rem; }
+  .go a { display: block; min-height: 44px; box-sizing: border-box; padding: 0.625rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); font-weight: 700; }
+  .how dt { font: 800 1.1875rem/1.2 var(--display); margin-top: 1.25rem; }
+  .how dd { margin: 0.25rem 0 0; }
+  .airing { padding-left: 1.25rem; }
+  .airing li { margin-bottom: 0.5rem; }
+  .airing time { font-weight: 700; }
+  /* The findings tables (DECISIONS 0042): scroll sideways inside their own
+     box on a narrow phone, never the page. */
+  .table-wrap { overflow-x: auto; margin: 0.75rem 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+  caption { text-align: left; font-weight: 700; padding-bottom: 0.375rem; }
+  th, td { padding: 0.375rem 0.5rem; border-bottom: 1px solid var(--line); text-align: right; vertical-align: top; }
+  th[scope="row"], thead th:first-child { text-align: left; }
+  thead th { border-bottom-width: 3px; }
+  .press-images { display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 1rem; margin: 1rem 0; padding: 0; list-style: none; }
+  .press-images img { display: block; width: 100%; height: auto; border-radius: 0.375rem; box-shadow: 0 0 0 1px var(--line); }
+  /* Windows high contrast and other forced palettes: the system's colors
+     win, the drawn frame keeps a visible border. */
+  @media (forced-colors: active) {
+    details.answer, details.more-characters summary, header, footer { border-color: CanvasText; }
+    details.answer summary { background: Canvas; color: CanvasText; }
+    a:focus-visible, summary:focus-visible { outline-color: Highlight; }
+    .go a, .app-soon { border-left-color: LinkText; }
+  }
+
+</style>
+<style>
+  .get-app { margin: 1.5rem 0; padding: 0.75rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); }
+  .get-app p { margin: 0; }
+  .app-store-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.25rem 0 0; }
+  .app-store-badge { display: inline-block; padding: 10px; line-height: 0; }
+  .app-store-badge:focus-visible { outline: 3px solid LinkText; outline-offset: 2px; }
+  .app-store-badge img { display: block; width: 120px; height: 40px; }
+  @media (forced-colors: active) { .get-app { border-left-color: LinkText; } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://queerframe.app/", "name": "Queer Frame", "position": 1}, {"@type": "ListItem", "item": "https://queerframe.app/airing/", "name": "Airing now", "position": 2}]}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "item": {"@type": "TVSeries", "name": "P-Valley", "url": "https://lezwatchtv.com/show/p-valley/"}, "position": 1}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Only Murders in the Building", "url": "https://queerframe.app/shows/only-murders-in-the-building/"}, "position": 2}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Emily in Paris", "url": "https://lezwatchtv.com/show/emily-in-paris/"}, "position": 3}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "High Potential", "url": "https://lezwatchtv.com/show/high-potential/"}, "position": 4}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Will Trent", "url": "https://queerframe.app/shows/will-trent/"}, "position": 5}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "The Rookie", "url": "https://queerframe.app/shows/the-rookie/"}, "position": 6}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Your Friendly Neighborhood Spider-Man", "url": "https://lezwatchtv.com/show/your-friendly-neighborhood-spider-man/"}, "position": 7}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Matlock (2024)", "url": "https://lezwatchtv.com/show/matlock-2024/"}, "position": 8}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Common Side Effects", "url": "https://lezwatchtv.com/show/common-side-effects/"}, "position": 9}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Invincible", "url": "https://lezwatchtv.com/show/invincible/"}, "position": 10}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "The Mighty Nein", "url": "https://queerframe.app/shows/the-mighty-nein/"}, "position": 11}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Animal Control", "url": "https://lezwatchtv.com/show/animal-control/"}, "position": 12}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Miraculous: Tales of Ladybug \u0026 Cat Noir", "url": "https://queerframe.app/shows/miraculous-tales-of-ladybug-cat-noir/"}, "position": 13}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "The Simpsons", "url": "https://queerframe.app/shows/the-simpsons/"}, "position": 14}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Tatort", "url": "https://queerframe.app/shows/tatort/"}, "position": 15}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Tracker", "url": "https://lezwatchtv.com/show/tracker/"}, "position": 16}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Murdoch Mysteries", "url": "https://queerframe.app/shows/murdoch-mysteries/"}, "position": 17}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "South Park", "url": "https://lezwatchtv.com/show/south-park/"}, "position": 18}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "The Madame Blanc Mysteries", "url": "https://lezwatchtv.com/show/the-madame-blanc-mysteries/"}, "position": 19}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Shetland", "url": "https://lezwatchtv.com/show/shetland/"}, "position": 20}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Beyond Paradise", "url": "https://queerframe.app/shows/beyond-paradise/"}, "position": 21}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Death in Paradise", "url": "https://queerframe.app/shows/death-in-paradise/"}, "position": 22}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Yellowjackets", "url": "https://queerframe.app/shows/yellowjackets/"}, "position": 23}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "FBI", "url": "https://lezwatchtv.com/show/fbi/"}, "position": 24}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "NCIS", "url": "https://queerframe.app/shows/ncis/"}, "position": 25}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Abbott Elementary", "url": "https://lezwatchtv.com/show/abbott-elementary/"}, "position": 26}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Elsbeth", "url": "https://queerframe.app/shows/elsbeth/"}, "position": 27}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Law \u0026 Order: Special Victims Unit", "url": "https://queerframe.app/shows/law-order-special-victims-unit/"}, "position": 28}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Ghosts (US)", "url": "https://queerframe.app/shows/ghosts-us/"}, "position": 29}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Fire Country", "url": "https://queerframe.app/shows/fire-country/"}, "position": 30}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Sheriff Country", "url": "https://lezwatchtv.com/show/sheriff-country/"}, "position": 31}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Chicago Fire", "url": "https://queerframe.app/shows/chicago-fire/"}, "position": 32}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Chicago Med", "url": "https://queerframe.app/shows/chicago-med/"}, "position": 33}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "9-1-1", "url": "https://queerframe.app/shows/9-1-1/"}, "position": 34}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "9-1-1: Nashville", "url": "https://lezwatchtv.com/show/9-1-1-nashville/"}, "position": 35}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Grey\u2019s Anatomy", "url": "https://queerframe.app/shows/greys-anatomy/"}, "position": 36}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Alles was z\u00e4hlt", "url": "https://lezwatchtv.com/show/alles-was-zahlt/"}, "position": 37}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Beyond the Gates", "url": "https://lezwatchtv.com/show/beyond-the-gates/"}, "position": 38}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Days of Our Lives", "url": "https://lezwatchtv.com/show/days-of-our-lives/"}, "position": 39}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "EastEnders", "url": "https://queerframe.app/shows/eastenders/"}, "position": 40}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "General Hospital", "url": "https://queerframe.app/shows/general-hospital/"}, "position": 41}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Home and Away", "url": "https://queerframe.app/shows/home-and-away/"}, "position": 42}, {"@type": "ListItem", "item": {"@type": "TVSeries", "name": "Sue\u00f1os de libertad", "url": "https://lezwatchtv.com/show/suenos-de-libertad/"}, "position": 43}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header>
+<div class="masthead">
+<svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#2b1740"/><path d="M13 0h12a7 7 0 0 1 7 7v19z" fill="#ff6f4f"/><path d="M12 10v12l10-6z" fill="#fbf3ee"/></svg>
+
+<p class="brand"><a href="https://queerframe.app/">Queer Frame</a></p>
+</div>
+<nav aria-label="Breadcrumb">
+<ol class="crumbs">
+<li><a href="https://queerframe.app/">Queer Frame</a></li>
+<li><span aria-current="page">Airing now</span></li>
+</ol>
+</nav>
+</header>
+<main id="main">
+
+<h1>Queer TV airing now: new episodes through March 2027</h1>
+<p class="opening">These are the shows LezWatch.TV marks as on air that TVmaze lists a new episode for between Saturday, November 21, 2026 and Wednesday, March 31, 2027. LezWatch.TV covers queer women, non-binary and trans characters, so this list does not cover shows whose only queer characters are cisgender gay and bisexual men.</p>
+<p>No spoilers: this page names no episode and no character, and says nothing about who dies. Each show page keeps that answer closed until you open it.</p>
+<h2 id="season-premieres">Season premieres</h2>
+<ul class="airing">
+<li>P-Valley (<a href="https://lezwatchtv.com/show/p-valley/">on LezWatch.TV</a>), Starz. Season 3 premieres <time datetime="2026-12-04">Friday, December 4, 2026</time>. LezWatch.TV lists 3 queer characters.</li>
+<li><a href="https://queerframe.app/shows/only-murders-in-the-building/">Only Murders in the Building</a>, Hulu. Season 6 premieres <time datetime="2026-12-08">Tuesday, December 8, 2026</time>. LezWatch.TV lists 6 queer characters.</li>
+<li>Emily in Paris (<a href="https://lezwatchtv.com/show/emily-in-paris/">on LezWatch.TV</a>), Netflix. Season 6 premieres <time datetime="2026-12-24">Thursday, December 24, 2026</time>. LezWatch.TV lists 2 queer characters.</li>
+<li>High Potential (<a href="https://lezwatchtv.com/show/high-potential/">on LezWatch.TV</a>), ABC. Season 3 premieres <time datetime="2027-01-05">Tuesday, January 5, 2027</time>. LezWatch.TV lists 3 queer characters.</li>
+<li><a href="https://queerframe.app/shows/will-trent/">Will Trent</a>, ABC. Season 5 premieres <time datetime="2027-01-05">Tuesday, January 5, 2027</time>. LezWatch.TV lists 7 queer characters.</li>
+<li><a href="https://queerframe.app/shows/the-rookie/">The Rookie</a>, ABC. Season 9 premieres <time datetime="2027-01-06">Wednesday, January 6, 2027</time>. LezWatch.TV lists 19 queer characters.</li>
+<li>Your Friendly Neighborhood Spider-Man (<a href="https://lezwatchtv.com/show/your-friendly-neighborhood-spider-man/">on LezWatch.TV</a>), Disney+. Season 2 premieres <time datetime="2027-01-13">Wednesday, January 13, 2027</time>. LezWatch.TV lists one queer character.</li>
+<li>Matlock (2024) (<a href="https://lezwatchtv.com/show/matlock-2024/">on LezWatch.TV</a>), CBS. Season 3 premieres <time datetime="2027-01-21">Thursday, January 21, 2027</time>. LezWatch.TV lists 4 queer characters.</li>
+<li>Common Side Effects (<a href="https://lezwatchtv.com/show/common-side-effects/">on LezWatch.TV</a>), Adult Swim. Season 2 premieres <time datetime="2027-01-24">Sunday, January 24, 2027</time>. LezWatch.TV lists 2 queer characters.</li>
+<li>Invincible (<a href="https://lezwatchtv.com/show/invincible/">on LezWatch.TV</a>), Prime Video. Season 5 premieres <time datetime="2027-02-17">Wednesday, February 17, 2027</time>. LezWatch.TV lists 2 queer characters.</li>
+<li><a href="https://queerframe.app/shows/the-mighty-nein/">The Mighty Nein</a>, Prime Video. Season 2 premieres <time datetime="2027-03-24">Wednesday, March 24, 2027</time>. LezWatch.TV lists 8 queer characters.</li>
+</ul>
+<h2 id="new-episodes">More new episodes</h2>
+<ul class="airing">
+<li>Animal Control (<a href="https://lezwatchtv.com/show/animal-control/">on LezWatch.TV</a>), FOX. Next episode <time datetime="2026-11-22">Sunday, November 22, 2026</time> (season 5, episode 8). LezWatch.TV lists one queer character.</li>
+<li><a href="https://queerframe.app/shows/miraculous-tales-of-ladybug-cat-noir/">Miraculous: Tales of Ladybug &amp; Cat Noir</a>, TF1. Next episode <time datetime="2026-11-22">Sunday, November 22, 2026</time> (season 7, episode 5). LezWatch.TV lists 8 queer characters.</li>
+<li><a href="https://queerframe.app/shows/the-simpsons/">The Simpsons</a>, FOX. Next episode <time datetime="2026-11-22">Sunday, November 22, 2026</time> (season 38, episode 8). LezWatch.TV lists 25 queer characters.</li>
+<li><a href="https://queerframe.app/shows/tatort/">Tatort</a>, Das Erste. Next episode <time datetime="2026-11-22">Sunday, November 22, 2026</time> (season 2026, episode 25). LezWatch.TV lists 6 queer characters.</li>
+<li>Tracker (<a href="https://lezwatchtv.com/show/tracker/">on LezWatch.TV</a>), CBS. Next episode <time datetime="2026-11-22">Sunday, November 22, 2026</time> (season 4, episode 7). LezWatch.TV lists 4 queer characters.</li>
+<li><a href="https://queerframe.app/shows/murdoch-mysteries/">Murdoch Mysteries</a>, CBC. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time> (season 20, episode 8). LezWatch.TV lists 14 queer characters.</li>
+<li>South Park (<a href="https://lezwatchtv.com/show/south-park/">on LezWatch.TV</a>), Comedy Central. Next episode <time datetime="2026-11-25">Wednesday, November 25, 2026</time> (season 29, episode 6). LezWatch.TV lists 3 queer characters.</li>
+<li>The Madame Blanc Mysteries (<a href="https://lezwatchtv.com/show/the-madame-blanc-mysteries/">on LezWatch.TV</a>), Acorn TV and Channel 5 (UK). Next episode <time datetime="2026-11-26">Thursday, November 26, 2026</time> (season 5, episode 5). LezWatch.TV lists 4 queer characters.</li>
+<li>Shetland (<a href="https://lezwatchtv.com/show/shetland/">on LezWatch.TV</a>), BBC One. Next episode <time datetime="2026-11-26">Thursday, November 26, 2026</time> (season 11, episode 3). LezWatch.TV lists 2 queer characters.</li>
+<li><a href="https://queerframe.app/shows/beyond-paradise/">Beyond Paradise</a>, BBC One. Next episode <time datetime="2026-11-27">Friday, November 27, 2026</time>. LezWatch.TV lists 5 queer characters.</li>
+<li><a href="https://queerframe.app/shows/death-in-paradise/">Death in Paradise</a>, BBC One. Next episode <time datetime="2026-11-27">Friday, November 27, 2026</time>. LezWatch.TV lists 7 queer characters.</li>
+<li><a href="https://queerframe.app/shows/yellowjackets/">Yellowjackets</a>, Showtime. Next episode <time datetime="2026-11-27">Friday, November 27, 2026</time> (season 4, episode 2). LezWatch.TV lists 7 queer characters.</li>
+<li>FBI (<a href="https://lezwatchtv.com/show/fbi/">on LezWatch.TV</a>), CBS. Next episode <time datetime="2026-11-30">Monday, November 30, 2026</time> (season 9, episode 8). LezWatch.TV lists one queer character.</li>
+<li><a href="https://queerframe.app/shows/ncis/">NCIS</a>, CBS. Next episode <time datetime="2026-12-01">Tuesday, December 1, 2026</time> (season 24, episode 7). LezWatch.TV lists 9 queer characters.</li>
+<li>Abbott Elementary (<a href="https://lezwatchtv.com/show/abbott-elementary/">on LezWatch.TV</a>), ABC. Next episode <time datetime="2026-12-02">Wednesday, December 2, 2026</time> (season 6, episode 7). LezWatch.TV lists 2 queer characters.</li>
+<li><a href="https://queerframe.app/shows/elsbeth/">Elsbeth</a>, CBS. Next episode <time datetime="2026-12-03">Thursday, December 3, 2026</time> (season 4, episode 7). LezWatch.TV lists 8 queer characters.</li>
+<li><a href="https://queerframe.app/shows/law-order-special-victims-unit/">Law &amp; Order: Special Victims Unit</a>, NBC. Next episode <time datetime="2026-12-03">Thursday, December 3, 2026</time> (season 28, episode 7). LezWatch.TV lists 38 queer characters.</li>
+<li><a href="https://queerframe.app/shows/ghosts-us/">Ghosts (US)</a>, CBS. Next episode <time datetime="2026-12-10">Thursday, December 10, 2026</time>. LezWatch.TV lists 5 queer characters.</li>
+<li><a href="https://queerframe.app/shows/fire-country/">Fire Country</a>, CBS. Next episode <time datetime="2026-12-11">Friday, December 11, 2026</time> (season 5, episode 7). LezWatch.TV lists 5 queer characters.</li>
+<li>Sheriff Country (<a href="https://lezwatchtv.com/show/sheriff-country/">on LezWatch.TV</a>), CBS. Next episode <time datetime="2026-12-11">Friday, December 11, 2026</time> (season 2, episode 7). LezWatch.TV lists 4 queer characters.</li>
+<li><a href="https://queerframe.app/shows/chicago-fire/">Chicago Fire</a>, NBC. Next episode <time datetime="2027-01-06">Wednesday, January 6, 2027</time> (season 15, episode 8). LezWatch.TV lists 6 queer characters.</li>
+<li><a href="https://queerframe.app/shows/chicago-med/">Chicago Med</a>, NBC. Next episode <time datetime="2027-01-06">Wednesday, January 6, 2027</time> (season 12, episode 8). LezWatch.TV lists 7 queer characters.</li>
+<li><a href="https://queerframe.app/shows/9-1-1/">9-1-1</a>, ABC and FOX. Next episode <time datetime="2027-01-07">Thursday, January 7, 2027</time> (season 10, episode 7). LezWatch.TV lists 5 queer characters.</li>
+<li>9-1-1: Nashville (<a href="https://lezwatchtv.com/show/9-1-1-nashville/">on LezWatch.TV</a>), ABC. Next episode <time datetime="2027-01-07">Thursday, January 7, 2027</time> (season 2, episode 7). LezWatch.TV lists 2 queer characters.</li>
+<li><a href="https://queerframe.app/shows/greys-anatomy/">Grey’s Anatomy</a>, ABC. Next episode <time datetime="2027-01-07">Thursday, January 7, 2027</time> (season 23, episode 7). LezWatch.TV lists 56 queer characters.</li>
+</ul>
+<h2 id="soaps">Soaps and telenovelas</h2>
+<p class="small">Soaps air often, so each line gives only the date TVmaze lists next.</p>
+<ul class="airing">
+<li>Alles was zählt (<a href="https://lezwatchtv.com/show/alles-was-zahlt/">on LezWatch.TV</a>), RTL Television. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time>. LezWatch.TV lists 3 queer characters.</li>
+<li>Beyond the Gates (<a href="https://lezwatchtv.com/show/beyond-the-gates/">on LezWatch.TV</a>), CBS. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time>. LezWatch.TV lists 3 queer characters.</li>
+<li>Days of Our Lives (<a href="https://lezwatchtv.com/show/days-of-our-lives/">on LezWatch.TV</a>), NBC and Peacock. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time>. LezWatch.TV lists 3 queer characters.</li>
+<li><a href="https://queerframe.app/shows/eastenders/">EastEnders</a>, BBC One. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time>. LezWatch.TV lists 25 queer characters.</li>
+<li><a href="https://queerframe.app/shows/general-hospital/">General Hospital</a>, ABC. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time>. LezWatch.TV lists 5 queer characters.</li>
+<li><a href="https://queerframe.app/shows/home-and-away/">Home and Away</a>, Seven Network. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time>. LezWatch.TV lists 11 queer characters.</li>
+<li>Sueños de libertad (<a href="https://lezwatchtv.com/show/suenos-de-libertad/">on LezWatch.TV</a>), Antena 3. Next episode <time datetime="2026-11-23">Monday, November 23, 2026</time>. LezWatch.TV lists 4 queer characters.</li>
+</ul>
+<p class="small">Shows TVmaze lists no date for are not here. That does not mean they are not coming back. Dates are the first broadcast in the show's home country, as TVmaze lists them, and can change; this page is rebuilt every night.</p>
+<h2 id="reminders">Get a reminder when it airs</h2>
+
+<div class="get-app"><p><strong>Get the iPhone app.</strong> Favorite the shows you follow and see each one's next episode at a glance, add the Up Next widget to your Home Screen, or turn on new-episode reminders. It works offline. No account, no ads, no subscription.</p><p class="app-store-cta"><a class="app-store-badge" href="https://apps.apple.com/app/id6818637465?pt=129452704&amp;ct=airing&amp;mt=8"><img src="https://queerframe.app/app-store-badge.svg" width="120" height="40" alt="Download on the App Store"></a> <span>Queer Frame for iPhone. $4.99 in the US; the App Store shows the local price where the app is sold.</span></p></div>
+
+<p><a href="https://queerframe.app/shows/">Browse every show, A to Z</a></p>
+<p class="small">Episode dates come from TVmaze, licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: <a href="https://www.tvmaze.com/">TVmaze</a>. Shows and character counts come from LezWatch.TV.</p>
+
+</main>
+<footer>
+
+<h2>The data</h2>
+<p>This dataset is published under the Creative Commons Attribution-ShareAlike 4.0 International license. Show and character data: LezWatch.TV. Episode and schedule data: TVmaze (CC BY-SA 4.0). Other titles and some season counts: Wikidata (CC0). If you redistribute this file, keep this notice and these credits.</p>
+<p>This data is published under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>. If you reuse it, keep these credits. It was last built from the sources on 2026-11-21.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://lezwatchtv.com/">LezWatch.TV</a>: Show and character data from LezWatch.TV (https://lezwatchtv.com), the volunteer-run database of queer female, non-binary and transgender characters on TV. Used with thanks under its terms of use; LezWatch.TV does not endorse this app. License: <a href="https://lezwatchtv.com/tos/">LezWatch.TV Terms of Use (free reuse, no formal open license)</a>. <a href="https://lezwatchtv.com/tos/">Terms</a>, read 2026-09-13.</li>
+<li><a href="https://www.tvmaze.com/">TVmaze</a>: Episode and schedule data from TVmaze (https://www.tvmaze.com), licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Reformatted for this app; TVmaze provides the data as-is without warranty and does not endorse this app. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. <a href="https://www.tvmaze.com/api">Terms</a>, read 2026-09-13.</li>
+</ul>
+<p>LezWatch.TV and TVmaze do not endorse Queer Frame. They are not responsible for the accuracy of this page.</p>
+<p class="small">This website has no analytics and no cookies, runs no code in your browser, and loads nothing from any other site. <a href="https://queerframe.app/privacy.html">Privacy policy</a> &middot; <a href="https://queerframe.app/terms.html">Terms of use</a> &middot; <a href="https://queerframe.app/support.html">Support</a> &middot; <a href="https://queerframe.app/data/">Data files</a> &middot; <a href="https://queerframe.app/findings/finales/">Findings</a> &middot; <a href="https://queerframe.app/press/">Press</a></p>
+</footer>
+</body>
+</html>
