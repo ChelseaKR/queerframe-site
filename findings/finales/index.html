@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-itunes-app" content="app-id=6818637465">
+<title>When queer TV characters die: season finales</title>
+<meta name="description" content="35% of queer TV regulars who die are killed in a season finale, against 8% of episodes. A dated analysis of LezWatch.TV and TVmaze data.">
+<link rel="canonical" href="https://queerframe.app/findings/finales/">
+<link rel="icon" href="https://queerframe.app/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Queer Frame">
+<meta property="og:title" content="When queer TV characters die: season finales">
+<meta property="og:description" content="35% of queer TV regulars who die are killed in a season finale, against 8% of episodes. A dated analysis of LezWatch.TV and TVmaze data.">
+<meta property="og:url" content="https://queerframe.app/findings/finales/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<style>
+  /* Queer Frame's identity (DECISIONS 0038): the app icon's aubergine and
+     coral, its diagonal split as the one motif, a condensed display face for
+     titles. System fonts only, nothing loaded. Every text pair is held to
+     WCAG AA in both schemes by tests/test_site_identity.py. */
+  :root {
+    color-scheme: light dark;
+    --paper: #f6f1fa; --surface: #ece3f4; --ink: #2b1740; --muted: #5e4a6e;
+    --link: #6a2c9c; --visited: #8b2a63; --coral: #ff6f4f; --coral-text: #b8381c;
+    --seal: #2b1740; --on-seal: #fbf3ee; --seal-corner: #ff6f4f; --line: #2b1740; --focus: #b8381c; --mark-edge: transparent;
+    --display: "Avenir Next Condensed", "Roboto Condensed", "Arial Narrow", sans-serif-condensed, system-ui, sans-serif;
+    --text: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1027; --surface: #2a1a37; --ink: #f3ecf7; --muted: #cdb8d8;
+      --link: #d9b8ff; --visited: #f2a6d4; --coral: #ff8a6b; --coral-text: #ff8a6b;
+      --seal: #ff8a6b; --on-seal: #1d1027; --seal-corner: #5a2d7a; --line: #cdb8d8; --focus: #ff8a6b; --mark-edge: #cdb8d8;
+    }
+  }
+  body { margin: 0 auto; max-width: 42rem; padding: 0 1rem 3rem; background: var(--paper); color: var(--ink); font: 1.0625rem/1.55 var(--text); overflow-wrap: break-word; }
+  a { color: var(--link); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+  a:visited { color: var(--visited); }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { position: static; display: inline-block; padding: 0.5rem 0; }
+  header { padding: 1rem 0 0.75rem; border-bottom: 3px solid var(--line); }
+  .masthead { display: flex; align-items: center; gap: 0.625rem; }
+  .mark { flex: none; width: 2rem; height: 2rem; border-radius: 7px; box-shadow: 0 0 0 1px var(--mark-edge); }
+  .brand { margin: 0; font: 800 1.375rem/1 var(--display); letter-spacing: 0.01em; }
+  .brand a, .brand a:visited { color: var(--ink); text-decoration: none; display: inline-block; padding: 0.5rem 0; }
+  .brand a:hover { text-decoration: underline; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0.25rem 0 0; padding: 0; list-style: none; font-size: 0.9375rem; color: var(--muted); }
+  .crumbs li + li::before { content: "/"; margin-right: 0.5rem; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; }
+  h1 { font-size: clamp(2rem, 1.35rem + 3vw, 2.875rem); line-height: 1.04; letter-spacing: -0.005em; margin: 1.5rem 0 0.75rem; }
+  h2 { font-size: 1.5rem; line-height: 1.15; margin: 2.25rem 0 0.5rem; }
+  h3 { font-size: 1.25rem; margin: 1.5rem 0 0.25rem; }
+  .opening, .lede { font-size: 1.1875rem; }
+  dl.facts { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr); gap: 0.25rem 1rem; margin: 0; }
+  dl.facts dt { font-weight: 700; color: var(--muted); }
+  dl.facts dd { margin: 0; overflow-wrap: anywhere; }
+  @media (max-width: 30rem) {
+    dl.facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    dl.facts dd { margin-bottom: 0.5rem; }
+  }
+  /* The one bold element: the sealed answer. Closed, only the summary bar is
+     drawn; nothing here changes what a closed details element renders. */
+  .spoiler-warning { margin: 1.75rem 0 0; }
+  details.answer { margin: 0.5rem 0 1.5rem; border: 3px solid var(--seal); border-radius: 0.375rem; background: var(--paper); }
+  details.answer summary { cursor: pointer; padding: 0.875rem 3rem 0.875rem 1rem; min-height: 44px; box-sizing: border-box; font: 800 1.25rem/1.2 var(--display); background: linear-gradient(225deg, var(--seal-corner) 0 1.5rem, transparent 1.5rem) var(--seal); color: var(--on-seal); }
+  details.answer summary::marker { color: var(--on-seal); }
+  details[open].answer summary { border-bottom: 3px solid var(--seal); }
+  .answer-body { padding: 0.25rem 1rem 1rem; }
+  .answer-body ul { padding-left: 1.25rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    details[open].answer .answer-body { animation: qf-reveal 180ms ease-out; }
+    @keyframes qf-reveal { from { opacity: 0; } to { opacity: 1; } }
+  }
+  /* The character question blocks (DECISIONS 0051). The "Show all" control
+     is a plain closed details element; nothing here styles its content. */
+  .character-questions { margin: 0 0 1.25rem; }
+  .character-questions h3 { margin: 1rem 0 0.125rem; }
+  .character-questions p { margin: 0 0 0.5rem; }
+  details.more-characters { margin: 1rem 0 1.5rem; }
+  details.more-characters summary { cursor: pointer; min-height: 44px; box-sizing: border-box; padding: 0.625rem 1rem; border: 2px solid var(--line); border-radius: 0.25rem; font: 800 1.125rem/1.2 var(--display); }
+  details.more-characters summary:hover { background: var(--surface); }
+  .next-episode { margin: 1.5rem 0 0; }
+  .cast { padding-left: 1.25rem; }
+  .cast li { margin-bottom: 0.5rem; }
+  .small { font-size: 0.9375rem; }
+  .app-soon { margin: 1.5rem 0; padding: 0.75rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); font-weight: 700; }
+  .more, .similar { padding-left: 1.25rem; }
+  .more li, .similar li { margin-bottom: 0.5rem; }
+  footer { margin-top: 3rem; padding: 0.25rem 1rem 1rem; border-top: 3px solid var(--line); background: var(--surface); color: var(--muted); font-size: 0.9375rem; }
+  footer h2 { font-size: 1.125rem; color: var(--ink); }
+  footer li { margin-bottom: 0.5rem; }
+  .letters { display: flex; flex-wrap: wrap; gap: 0.375rem; margin: 0.5rem 0 0; padding: 0; list-style: none; }
+  .letters a { display: inline-block; min-width: 44px; min-height: 44px; line-height: 40px; box-sizing: border-box; text-align: center; border: 2px solid var(--line); border-radius: 0.25rem; font: 800 1.125rem/40px var(--display); text-decoration: none; }
+  .letters a:hover { background: var(--surface); }
+  .shows { padding-left: 1.25rem; }
+  .shows li { margin-bottom: 0.375rem; }
+  .go { margin: 1rem 0; padding: 0; list-style: none; }
+  .go li { margin-bottom: 0.5rem; }
+  .go a { display: block; min-height: 44px; box-sizing: border-box; padding: 0.625rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); font-weight: 700; }
+  .how dt { font: 800 1.1875rem/1.2 var(--display); margin-top: 1.25rem; }
+  .how dd { margin: 0.25rem 0 0; }
+  .airing { padding-left: 1.25rem; }
+  .airing li { margin-bottom: 0.5rem; }
+  .airing time { font-weight: 700; }
+  /* The findings tables (DECISIONS 0042): scroll sideways inside their own
+     box on a narrow phone, never the page. */
+  .table-wrap { overflow-x: auto; margin: 0.75rem 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+  caption { text-align: left; font-weight: 700; padding-bottom: 0.375rem; }
+  th, td { padding: 0.375rem 0.5rem; border-bottom: 1px solid var(--line); text-align: right; vertical-align: top; }
+  th[scope="row"], thead th:first-child { text-align: left; }
+  thead th { border-bottom-width: 3px; }
+  .press-images { display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 1rem; margin: 1rem 0; padding: 0; list-style: none; }
+  .press-images img { display: block; width: 100%; height: auto; border-radius: 0.375rem; box-shadow: 0 0 0 1px var(--line); }
+  /* Windows high contrast and other forced palettes: the system's colors
+     win, the drawn frame keeps a visible border. */
+  @media (forced-colors: active) {
+    details.answer, details.more-characters summary, header, footer { border-color: CanvasText; }
+    details.answer summary { background: Canvas; color: CanvasText; }
+    a:focus-visible, summary:focus-visible { outline-color: Highlight; }
+    .go a, .app-soon { border-left-color: LinkText; }
+  }
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://queerframe.app/", "name": "Queer Frame", "position": 1}, {"@type": "ListItem", "item": "https://queerframe.app/findings/finales/", "name": "Findings", "position": 2}]}, {"@type": "Article", "datePublished": "2026-11-06", "headline": "35% of queer TV regulars who die are killed in a season finale", "isBasedOn": ["https://lezwatchtv.com/", "https://www.tvmaze.com/"], "license": "https://creativecommons.org/licenses/by-sa/4.0/", "url": "https://queerframe.app/findings/finales/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header>
+<div class="masthead">
+<svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#2b1740"/><path d="M13 0h12a7 7 0 0 1 7 7v19z" fill="#ff6f4f"/><path d="M12 10v12l10-6z" fill="#fbf3ee"/></svg>
+
+<p class="brand"><a href="https://queerframe.app/">Queer Frame</a></p>
+</div>
+<nav aria-label="Breadcrumb">
+<ol class="crumbs">
+<li><a href="https://queerframe.app/">Queer Frame</a></li>
+<li><span aria-current="page">Findings</span></li>
+</ol>
+</nav>
+</header>
+<main id="main">
+
+<h1>35% of queer TV regulars who die are killed in a season finale</h1>
+<p class="small">Data as of <time datetime="2026-11-06">November 6, 2026</time>. Analysis by Queer Frame of <a href="https://lezwatchtv.com/">LezWatch.TV</a>'s character data and <a href="https://www.tvmaze.com/">TVmaze</a>'s episode dates.</p>
+<p class="lede">When a queer character who is a regular on a TV show dies, it happens in a season finale 35% of the time (50 of 142 deaths we could place in an episode). Only 8% of those shows' episodes are season finales, so that is about 4.4 times what chance would give. Guest characters die in a finale 7% of the time, close to the 8% chance would give.</p>
+<p>This page names no show, no character and no episode, so it spoils nothing. It counts deaths; it does not list them.</p>
+
+<h2 id="finales">Season finales, by role</h2>
+<p>The share of placed deaths that fall in a season finale, and the share you would expect if each death had landed on a random episode of its own show.</p>
+<div class="table-wrap">
+<table>
+<caption>Deaths in a season finale, by the character's role in the show</caption>
+<thead><tr><th scope="col">Role</th><th scope="col">Deaths placed</th><th scope="col">In a season finale</th><th scope="col">Share</th><th scope="col">Expected by chance</th></tr></thead>
+<tbody>
+<tr><th scope="row">Regulars</th><td>142</td><td>50</td><td>35%</td><td>8%</td></tr>
+<tr><th scope="row">Recurring</th><td>124</td><td>20</td><td>16%</td><td>8%</td></tr>
+<tr><th scope="row">Guests</th><td>165</td><td>11</td><td>7%</td><td>8%</td></tr>
+<tr><th scope="row">All roles</th><td>431</td><td>81</td><td>19%</td><td>8%</td></tr>
+</tbody>
+</table>
+</div>
+<p>For regulars, the 95% confidence interval is 28% to 43%. No single show accounts for more than 3 of the finale deaths.</p>
+
+<h3 id="holds">It holds across eras and release models</h3>
+<div class="table-wrap">
+<table>
+<caption>Regulars: deaths in a season finale, by when they died and how the show was released</caption>
+<thead><tr><th scope="col">Group</th><th scope="col">Deaths placed</th><th scope="col">In a season finale</th><th scope="col">Share</th><th scope="col">Expected by chance</th></tr></thead>
+<tbody>
+<tr><th scope="row">Died before 2010</th><td>40</td><td>11</td><td>28%</td><td>8%</td></tr>
+<tr><th scope="row">Died in 2010 or later</th><td>102</td><td>39</td><td>38%</td><td>8%</td></tr>
+<tr><th scope="row">Broadcast or cable</th><td>123</td><td>44</td><td>36%</td><td>8%</td></tr>
+<tr><th scope="row">Streaming</th><td>19</td><td>6</td><td>32%</td><td>9%</td></tr>
+</tbody>
+</table>
+</div>
+<p class="small">Streaming here means a show TVmaze lists on a streaming service and no TV network. The streaming row rests on few deaths. Many streaming deaths can't be placed, because a whole season came out on one day; see the caveats below.</p>
+
+<h2 id="seasons">Deaths are spread evenly across a show's seasons</h2>
+<p>Deaths are not bunched at the start or the end of a show's run. The first season holds 27% of placed deaths and 28% of the episodes. The pattern is within a season, not across the run.</p>
+<div class="table-wrap">
+<table>
+<caption>Placed deaths by season of the show, against that season's share of episodes</caption>
+<thead><tr><th scope="col">Season</th><th scope="col">Deaths placed</th><th scope="col">Share of deaths</th><th scope="col">Share of episodes</th></tr></thead>
+<tbody>
+<tr><th scope="row">First season</th><td>117</td><td>27%</td><td>28%</td></tr>
+<tr><th scope="row">Second season</th><td>75</td><td>17%</td><td>18%</td></tr>
+<tr><th scope="row">Third season or later</th><td>239</td><td>55%</td><td>55%</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="series-finales">Series finales, a smaller sample</h2>
+<p>In shows that have ended, 10% of placed deaths (32 of 329) fall in the series finale, against 3% expected by chance: about 3 times as often. That rests on few deaths, so read it as a hint, not a finding.</p>
+
+<h2 id="method">How we counted</h2>
+<dl class="how">
+<dt>A death</dt>
+<dd>A date in LezWatch.TV's death-date field for a character, counted in the show whose years for that character include the year of the death. A character who later comes back still counts. The snapshot holds 673 such deaths.</dd>
+<dt>Placed in an episode</dt>
+<dd>We matched each death date to TVmaze's episode air dates. A death is placed only when exactly one episode of that show aired on that date, or, failing that, exactly one within a day. When two or more aired the same day (a double bill, or a season released all at once), or none did, the death is left out. That leaves 431 deaths on 266 shows. Specials are left out.</dd>
+<dt>A regular</dt>
+<dd>LezWatch.TV's role for the character in that show: regular, recurring or guest.</dd>
+<dt>A season finale</dt>
+<dd>The highest-numbered regular episode TVmaze lists for that season. A series finale is the last episode of the last season of a show TVmaze marks as ended.</dd>
+<dt>Expected by chance</dt>
+<dd>For each death, the chance that a random episode of its own show is a season finale (its number of seasons over its number of episodes), averaged over the deaths in the group. Long seasons make a finale rarer; short ones make it more common.</dd>
+<dt>Dates</dt>
+<dd>LezWatch.TV data from the Queer Frame snapshot of November 6, 2026; TVmaze episode lists read on November 6, 2026. These figures are fixed as of those dates and are not updated with each nightly build.</dd>
+</dl>
+
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>LezWatch.TV is a volunteer-run database. It covers more US shows than any other country, and it is more complete for the shows its community watched. Older shows were filled in unevenly.</li>
+<li>LezWatch.TV dates a death to the day the episode aired. It may record the episode where a death is revealed rather than the one where it happens, and an air date can now and then match the wrong episode by chance.</li>
+<li>Only deaths we could place are counted. Most deaths in seasons released all at once can't be placed, so streaming shows are under-represented.</li>
+<li>Guest deaths include victims of the week on crime and medical shows, which is why the figures are split by role.</li>
+<li>A season still airing may not have its finale listed yet, so its last listed episode is counted as its finale.</li>
+</ul>
+
+<h2 id="data">The data</h2>
+<p>The table behind this page, counts only, is a CSV file: <a href="https://queerframe.app/findings/finales/finales.csv">finales.csv</a>. It names no show or character and dates no death. This page and that file are adapted from TVmaze data and published under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>; if you reuse them, credit LezWatch.TV, TVmaze and Queer Frame, and share your version under the same license.</p>
+<p>Want to know about one show without spoilers for the rest? <a href="https://queerframe.app/">Look it up on Queer Frame</a>; the answer stays closed until you open it.</p>
+
+</main>
+<footer>
+
+<h2>The data</h2>
+<p>This dataset is published under the Creative Commons Attribution-ShareAlike 4.0 International license. Show and character data: LezWatch.TV. Episode and schedule data: TVmaze (CC BY-SA 4.0). Other titles and some season counts: Wikidata (CC0). If you redistribute this file, keep this notice and these credits.</p>
+<p>This data is published under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>. If you reuse it, keep these credits. It was last built from the sources on 2026-11-28.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://lezwatchtv.com/">LezWatch.TV</a>: Show and character data from LezWatch.TV (https://lezwatchtv.com), the volunteer-run database of queer female, non-binary and transgender characters on TV. Used with thanks under its terms of use; LezWatch.TV does not endorse this app. License: <a href="https://lezwatchtv.com/tos/">LezWatch.TV Terms of Use (free reuse, no formal open license)</a>. <a href="https://lezwatchtv.com/tos/">Terms</a>, read 2026-09-13.</li>
+<li><a href="https://www.tvmaze.com/">TVmaze</a>: Episode and schedule data from TVmaze (https://www.tvmaze.com), licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Reformatted for this app; TVmaze provides the data as-is without warranty and does not endorse this app. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. <a href="https://www.tvmaze.com/api">Terms</a>, read 2026-09-13.</li>
+</ul>
+<p>LezWatch.TV and TVmaze do not endorse Queer Frame. They are not responsible for the accuracy of this page.</p>
+<p class="small">This website has no analytics and no cookies, runs no code in your browser, and loads nothing from any other site. <a href="https://queerframe.app/privacy.html">Privacy policy</a> &middot; <a href="https://queerframe.app/terms.html">Terms of use</a> &middot; <a href="https://queerframe.app/support.html">Support</a> &middot; <a href="https://queerframe.app/data/">Data files</a> &middot; <a href="https://queerframe.app/findings/finales/">Findings</a> &middot; <a href="https://queerframe.app/press/">Press</a></p>
+</footer>
+</body>
+</html>

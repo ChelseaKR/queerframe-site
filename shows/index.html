@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-itunes-app" content="app-id=6818637465">
+<title>Do queer characters die? 364 TV shows, spoiler-free</title>
+<meta name="description" content="Does she die in your show? Check for the bury-your-gays trope before you watch: LGBTQ characters in each show, with the answer hidden until you open it.">
+<link rel="canonical" href="https://queerframe.app/shows/">
+<link rel="icon" href="https://queerframe.app/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Queer Frame">
+<meta property="og:title" content="Do queer characters die? 364 TV shows, spoiler-free">
+<meta property="og:description" content="Does she die in your show? Check for the bury-your-gays trope before you watch: LGBTQ characters in each show, with the answer hidden until you open it.">
+<meta property="og:url" content="https://queerframe.app/shows/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<style>
+  /* Queer Frame's identity (DECISIONS 0038): the app icon's aubergine and
+     coral, its diagonal split as the one motif, a condensed display face for
+     titles. System fonts only, nothing loaded. Every text pair is held to
+     WCAG AA in both schemes by tests/test_site_identity.py. */
+  :root {
+    color-scheme: light dark;
+    --paper: #f6f1fa; --surface: #ece3f4; --ink: #2b1740; --muted: #5e4a6e;
+    --link: #6a2c9c; --visited: #8b2a63; --coral: #ff6f4f; --coral-text: #b8381c;
+    --seal: #2b1740; --on-seal: #fbf3ee; --seal-corner: #ff6f4f; --line: #2b1740; --focus: #b8381c; --mark-edge: transparent;
+    --display: "Avenir Next Condensed", "Roboto Condensed", "Arial Narrow", sans-serif-condensed, system-ui, sans-serif;
+    --text: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1027; --surface: #2a1a37; --ink: #f3ecf7; --muted: #cdb8d8;
+      --link: #d9b8ff; --visited: #f2a6d4; --coral: #ff8a6b; --coral-text: #ff8a6b;
+      --seal: #ff8a6b; --on-seal: #1d1027; --seal-corner: #5a2d7a; --line: #cdb8d8; --focus: #ff8a6b; --mark-edge: #cdb8d8;
+    }
+  }
+  body { margin: 0 auto; max-width: 42rem; padding: 0 1rem 3rem; background: var(--paper); color: var(--ink); font: 1.0625rem/1.55 var(--text); overflow-wrap: break-word; }
+  a { color: var(--link); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+  a:visited { color: var(--visited); }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { position: static; display: inline-block; padding: 0.5rem 0; }
+  header { padding: 1rem 0 0.75rem; border-bottom: 3px solid var(--line); }
+  .masthead { display: flex; align-items: center; gap: 0.625rem; }
+  .mark { flex: none; width: 2rem; height: 2rem; border-radius: 7px; box-shadow: 0 0 0 1px var(--mark-edge); }
+  .brand { margin: 0; font: 800 1.375rem/1 var(--display); letter-spacing: 0.01em; }
+  .brand a, .brand a:visited { color: var(--ink); text-decoration: none; display: inline-block; padding: 0.5rem 0; }
+  .brand a:hover { text-decoration: underline; }
+  .crumbs { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0.25rem 0 0; padding: 0; list-style: none; font-size: 0.9375rem; color: var(--muted); }
+  .crumbs li + li::before { content: "/"; margin-right: 0.5rem; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; }
+  h1 { font-size: clamp(2rem, 1.35rem + 3vw, 2.875rem); line-height: 1.04; letter-spacing: -0.005em; margin: 1.5rem 0 0.75rem; }
+  h2 { font-size: 1.5rem; line-height: 1.15; margin: 2.25rem 0 0.5rem; }
+  h3 { font-size: 1.25rem; margin: 1.5rem 0 0.25rem; }
+  .opening, .lede { font-size: 1.1875rem; }
+  dl.facts { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr); gap: 0.25rem 1rem; margin: 0; }
+  dl.facts dt { font-weight: 700; color: var(--muted); }
+  dl.facts dd { margin: 0; overflow-wrap: anywhere; }
+  @media (max-width: 30rem) {
+    dl.facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    dl.facts dd { margin-bottom: 0.5rem; }
+  }
+  /* The one bold element: the sealed answer. Closed, only the summary bar is
+     drawn; nothing here changes what a closed details element renders. */
+  .spoiler-warning { margin: 1.75rem 0 0; }
+  details.answer { margin: 0.5rem 0 1.5rem; border: 3px solid var(--seal); border-radius: 0.375rem; background: var(--paper); }
+  details.answer summary { cursor: pointer; padding: 0.875rem 3rem 0.875rem 1rem; min-height: 44px; box-sizing: border-box; font: 800 1.25rem/1.2 var(--display); background: linear-gradient(225deg, var(--seal-corner) 0 1.5rem, transparent 1.5rem) var(--seal); color: var(--on-seal); }
+  details.answer summary::marker { color: var(--on-seal); }
+  details[open].answer summary { border-bottom: 3px solid var(--seal); }
+  .answer-body { padding: 0.25rem 1rem 1rem; }
+  .answer-body ul { padding-left: 1.25rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    details[open].answer .answer-body { animation: qf-reveal 180ms ease-out; }
+    @keyframes qf-reveal { from { opacity: 0; } to { opacity: 1; } }
+  }
+  /* The character question blocks (DECISIONS 0051). The "Show all" control
+     is a plain closed details element; nothing here styles its content. */
+  .character-questions { margin: 0 0 1.25rem; }
+  .character-questions h3 { margin: 1rem 0 0.125rem; }
+  .character-questions p { margin: 0 0 0.5rem; }
+  details.more-characters { margin: 1rem 0 1.5rem; }
+  details.more-characters summary { cursor: pointer; min-height: 44px; box-sizing: border-box; padding: 0.625rem 1rem; border: 2px solid var(--line); border-radius: 0.25rem; font: 800 1.125rem/1.2 var(--display); }
+  details.more-characters summary:hover { background: var(--surface); }
+  .next-episode { margin: 1.5rem 0 0; }
+  .cast { padding-left: 1.25rem; }
+  .cast li { margin-bottom: 0.5rem; }
+  .small { font-size: 0.9375rem; }
+  .app-soon { margin: 1.5rem 0; padding: 0.75rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); font-weight: 700; }
+  .more, .similar { padding-left: 1.25rem; }
+  .more li, .similar li { margin-bottom: 0.5rem; }
+  footer { margin-top: 3rem; padding: 0.25rem 1rem 1rem; border-top: 3px solid var(--line); background: var(--surface); color: var(--muted); font-size: 0.9375rem; }
+  footer h2 { font-size: 1.125rem; color: var(--ink); }
+  footer li { margin-bottom: 0.5rem; }
+  .letters { display: flex; flex-wrap: wrap; gap: 0.375rem; margin: 0.5rem 0 0; padding: 0; list-style: none; }
+  .letters a { display: inline-block; min-width: 44px; min-height: 44px; line-height: 40px; box-sizing: border-box; text-align: center; border: 2px solid var(--line); border-radius: 0.25rem; font: 800 1.125rem/40px var(--display); text-decoration: none; }
+  .letters a:hover { background: var(--surface); }
+  .shows { padding-left: 1.25rem; }
+  .shows li { margin-bottom: 0.375rem; }
+  .go { margin: 1rem 0; padding: 0; list-style: none; }
+  .go li { margin-bottom: 0.5rem; }
+  .go a { display: block; min-height: 44px; box-sizing: border-box; padding: 0.625rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); font-weight: 700; }
+  .how dt { font: 800 1.1875rem/1.2 var(--display); margin-top: 1.25rem; }
+  .how dd { margin: 0.25rem 0 0; }
+  .airing { padding-left: 1.25rem; }
+  .airing li { margin-bottom: 0.5rem; }
+  .airing time { font-weight: 700; }
+  /* The findings tables (DECISIONS 0042): scroll sideways inside their own
+     box on a narrow phone, never the page. */
+  .table-wrap { overflow-x: auto; margin: 0.75rem 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+  caption { text-align: left; font-weight: 700; padding-bottom: 0.375rem; }
+  th, td { padding: 0.375rem 0.5rem; border-bottom: 1px solid var(--line); text-align: right; vertical-align: top; }
+  th[scope="row"], thead th:first-child { text-align: left; }
+  thead th { border-bottom-width: 3px; }
+  .press-images { display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 1rem; margin: 1rem 0; padding: 0; list-style: none; }
+  .press-images img { display: block; width: 100%; height: auto; border-radius: 0.375rem; box-shadow: 0 0 0 1px var(--line); }
+  /* Windows high contrast and other forced palettes: the system's colors
+     win, the drawn frame keeps a visible border. */
+  @media (forced-colors: active) {
+    details.answer, details.more-characters summary, header, footer { border-color: CanvasText; }
+    details.answer summary { background: Canvas; color: CanvasText; }
+    a:focus-visible, summary:focus-visible { outline-color: Highlight; }
+    .go a, .app-soon { border-left-color: LinkText; }
+  }
+
+</style>
+<style>
+  .get-app { margin: 1.5rem 0; padding: 0.75rem 1rem; border-left: 6px solid var(--coral); background: var(--surface); }
+  .get-app p { margin: 0; }
+  .app-store-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.25rem 0 0; }
+  .app-store-badge { display: inline-block; padding: 10px; line-height: 0; }
+  .app-store-badge:focus-visible { outline: 3px solid LinkText; outline-offset: 2px; }
+  .app-store-badge img { display: block; width: 120px; height: 40px; }
+  @media (forced-colors: active) { .get-app { border-left-color: LinkText; } }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://queerframe.app/", "name": "Queer Frame", "position": 1}, {"@type": "ListItem", "item": "https://queerframe.app/shows/", "name": "Shows", "position": 2}]}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "name": "The L Word", "position": 1, "url": "https://queerframe.app/shows/the-l-word/"}, {"@type": "ListItem", "name": "The L Word: Generation Q", "position": 2, "url": "https://queerframe.app/shows/the-l-word-generation-q/"}, {"@type": "ListItem", "name": "Orange is the New Black", "position": 3, "url": "https://queerframe.app/shows/orange-is-the-new-black/"}, {"@type": "ListItem", "name": "Pose", "position": 4, "url": "https://queerframe.app/shows/pose/"}, {"@type": "ListItem", "name": "Sense8", "position": 5, "url": "https://queerframe.app/shows/sense8/"}, {"@type": "ListItem", "name": "Batwoman", "position": 6, "url": "https://queerframe.app/shows/batwoman/"}, {"@type": "ListItem", "name": "Wentworth", "position": 7, "url": "https://queerframe.app/shows/wentworth/"}, {"@type": "ListItem", "name": "Vida", "position": 8, "url": "https://queerframe.app/shows/vida/"}, {"@type": "ListItem", "name": "Good Trouble", "position": 9, "url": "https://queerframe.app/shows/good-trouble/"}, {"@type": "ListItem", "name": "The Bold Type", "position": 10, "url": "https://queerframe.app/shows/the-bold-type/"}, {"@type": "ListItem", "name": "Killing Eve", "position": 11, "url": "https://queerframe.app/shows/killing-eve/"}, {"@type": "ListItem", "name": "The 100", "position": 12, "url": "https://queerframe.app/shows/the-100/"}, {"@type": "ListItem", "name": "Buffy The Vampire Slayer", "position": 13, "url": "https://queerframe.app/shows/buffy-the-vampire-slayer/"}, {"@type": "ListItem", "name": "Wynonna Earp", "position": 14, "url": "https://queerframe.app/shows/wynonna-earp/"}, {"@type": "ListItem", "name": "Supergirl", "position": 15, "url": "https://queerframe.app/shows/supergirl/"}, {"@type": "ListItem", "name": "Our Flag Means Death", "position": 16, "url": "https://queerframe.app/shows/our-flag-means-death/"}, {"@type": "ListItem", "name": "Heartstopper", "position": 17, "url": "https://queerframe.app/shows/heartstopper/"}, {"@type": "ListItem", "name": "Gentleman Jack", "position": 18, "url": "https://queerframe.app/shows/gentleman-jack/"}, {"@type": "ListItem", "name": "First Kill", "position": 19, "url": "https://queerframe.app/shows/first-kill/"}, {"@type": "ListItem", "name": "Warrior Nun", "position": 20, "url": "https://queerframe.app/shows/warrior-nun/"}, {"@type": "ListItem", "name": "Sex Education", "position": 21, "url": "https://queerframe.app/shows/sex-education/"}, {"@type": "ListItem", "name": "Yellowjackets", "position": 22, "url": "https://queerframe.app/shows/yellowjackets/"}, {"@type": "ListItem", "name": "Schitt\u2019s Creek", "position": 23, "url": "https://queerframe.app/shows/schitts-creek/"}, {"@type": "ListItem", "name": "Euphoria", "position": 24, "url": "https://queerframe.app/shows/euphoria/"}, {"@type": "ListItem", "name": "Legends of Tomorrow", "position": 25, "url": "https://queerframe.app/shows/legends-of-tomorrow/"}, {"@type": "ListItem", "name": "Shameless (US)", "position": 26, "url": "https://queerframe.app/shows/shameless-us/"}, {"@type": "ListItem", "name": "Grey\u2019s Anatomy", "position": 27, "url": "https://queerframe.app/shows/greys-anatomy/"}, {"@type": "ListItem", "name": "Law \u0026 Order: Special Victims Unit", "position": 28, "url": "https://queerframe.app/shows/law-order-special-victims-unit/"}, {"@type": "ListItem", "name": "American Horror Story", "position": 29, "url": "https://queerframe.app/shows/american-horror-story/"}, {"@type": "ListItem", "name": "Doctor Who (2005)", "position": 30, "url": "https://queerframe.app/shows/doctor-who/"}, {"@type": "ListItem", "name": "Supernatural", "position": 31, "url": "https://queerframe.app/shows/supernatural/"}, {"@type": "ListItem", "name": "The Walking Dead", "position": 32, "url": "https://queerframe.app/shows/the-walking-dead/"}, {"@type": "ListItem", "name": "Black Mirror", "position": 33, "url": "https://queerframe.app/shows/black-mirror/"}, {"@type": "ListItem", "name": "The Last of Us", "position": 34, "url": "https://queerframe.app/shows/the-last-of-us/"}, {"@type": "ListItem", "name": "Orphan Black", "position": 35, "url": "https://queerframe.app/shows/orphan-black/"}, {"@type": "ListItem", "name": "Lost Girl", "position": 36, "url": "https://queerframe.app/shows/lost-girl/"}, {"@type": "ListItem", "name": "Carmilla", "position": 37, "url": "https://queerframe.app/shows/carmilla/"}, {"@type": "ListItem", "name": "Faking It", "position": 38, "url": "https://queerframe.app/shows/faking-it/"}, {"@type": "ListItem", "name": "Degrassi: The Next Generation", "position": 39, "url": "https://queerframe.app/shows/degrassi-tng/"}, {"@type": "ListItem", "name": "Grace and Frankie", "position": 40, "url": "https://queerframe.app/shows/grace-and-frankie/"}, {"@type": "ListItem", "name": "Transparent", "position": 41, "url": "https://queerframe.app/shows/transparent/"}, {"@type": "ListItem", "name": "Feel Good", "position": 42, "url": "https://queerframe.app/shows/feel-good/"}, {"@type": "ListItem", "name": "Gen V", "position": 43, "url": "https://queerframe.app/shows/gen-v/"}, {"@type": "ListItem", "name": "Shadow and Bone", "position": 44, "url": "https://queerframe.app/shows/shadow-and-bone/"}, {"@type": "ListItem", "name": "The Handmaid\u2019s Tale", "position": 45, "url": "https://queerframe.app/shows/the-handmaids-tale/"}, {"@type": "ListItem", "name": "Station 19", "position": 46, "url": "https://queerframe.app/shows/station-19/"}, {"@type": "ListItem", "name": "Riverdale", "position": 47, "url": "https://queerframe.app/shows/riverdale/"}, {"@type": "ListItem", "name": "Cobra Kai", "position": 48, "url": "https://queerframe.app/shows/cobra-kai/"}, {"@type": "ListItem", "name": "Jane the Virgin", "position": 49, "url": "https://queerframe.app/shows/jane-the-virgin/"}, {"@type": "ListItem", "name": "The Good Wife", "position": 50, "url": "https://queerframe.app/shows/the-good-wife/"}, {"@type": "ListItem", "name": "Shortland Street", "position": 51, "url": "https://queerframe.app/shows/shortland-street/"}, {"@type": "ListItem", "name": "Hollyoaks", "position": 52, "url": "https://queerframe.app/shows/hollyoaks/"}, {"@type": "ListItem", "name": "Neighbours", "position": 53, "url": "https://queerframe.app/shows/neighbours/"}, {"@type": "ListItem", "name": "Emmerdale", "position": 54, "url": "https://queerframe.app/shows/emmerdale/"}, {"@type": "ListItem", "name": "Undressed", "position": 55, "url": "https://queerframe.app/shows/undressed/"}, {"@type": "ListItem", "name": "The Simpsons", "position": 56, "url": "https://queerframe.app/shows/the-simpsons/"}, {"@type": "ListItem", "name": "EastEnders", "position": 57, "url": "https://queerframe.app/shows/eastenders/"}, {"@type": "ListItem", "name": "Midsomer Murders", "position": 58, "url": "https://queerframe.app/shows/midsomer-murders/"}, {"@type": "ListItem", "name": "Two and a Half Men", "position": 59, "url": "https://queerframe.app/shows/two-and-a-half-men/"}, {"@type": "ListItem", "name": "Coronation Street", "position": 60, "url": "https://queerframe.app/shows/coronation-street/"}, {"@type": "ListItem", "name": "New Amsterdam", "position": 61, "url": "https://queerframe.app/shows/new-amsterdam/"}, {"@type": "ListItem", "name": "Casualty", "position": 62, "url": "https://queerframe.app/shows/casualty/"}, {"@type": "ListItem", "name": "Hinter Gittern", "position": 63, "url": "https://queerframe.app/shows/hinter-gittern/"}, {"@type": "ListItem", "name": "Charmed (2018)", "position": 64, "url": "https://queerframe.app/shows/charmed-2018/"}, {"@type": "ListItem", "name": "The Rookie", "position": 65, "url": "https://queerframe.app/shows/the-rookie/"}, {"@type": "ListItem", "name": "The Sex Lives of College Girls", "position": 66, "url": "https://queerframe.app/shows/the-sex-lives-of-college-girls/"}, {"@type": "ListItem", "name": "The Brokenwood Mysteries", "position": 67, "url": "https://queerframe.app/shows/the-brokenwood-mysteries/"}, {"@type": "ListItem", "name": "The Air \u0e40\u0e2a\u0e19\u0e48\u0e2b\u0e32\u0e27\u0e32\u0e42\u0e22", "position": 68, "url": "https://queerframe.app/shows/the-air-%e0%b9%80%e0%b8%aa%e0%b8%99%e0%b9%88%e0%b8%ab%e0%b8%b2%e0%b8%a7%e0%b8%b2%e0%b9%82%e0%b8%a2/"}, {"@type": "ListItem", "name": "Girl Rules \u0e01\u0e0e\u0e2b\u0e25\u0e31\u0e01\u2026\u0e2b\u0e49\u0e32\u0e21\u0e23\u0e31\u0e01\u0e40\u0e18\u0e2d", "position": 69, "url": "https://queerframe.app/shows/girl-rules-%e0%b8%81%e0%b8%8e%e0%b8%ab%e0%b8%a5%e0%b8%b1%e0%b8%81-%e0%b8%ab%e0%b9%89%e0%b8%b2%e0%b8%a1%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b9%80%e0%b8%98%e0%b8%ad/"}, {"@type": "ListItem", "name": "Bad Girls", "position": 70, "url": "https://queerframe.app/shows/bad-girls/"}, {"@type": "ListItem", "name": "Doctors", "position": 71, "url": "https://queerframe.app/shows/doctors/"}, {"@type": "ListItem", "name": "Salatut el\u00e4m\u00e4t", "position": 72, "url": "https://queerframe.app/shows/salatut-elamat/"}, {"@type": "ListItem", "name": "Veneno", "position": 73, "url": "https://queerframe.app/shows/veneno/"}, {"@type": "ListItem", "name": "Exes and Ohs", "position": 74, "url": "https://queerframe.app/shows/exes-and-ohs/"}, {"@type": "ListItem", "name": "Verbotene Liebe", "position": 75, "url": "https://queerframe.app/shows/verbotene-liebe/"}, {"@type": "ListItem", "name": "F\u00e9minin/F\u00e9minin", "position": 76, "url": "https://queerframe.app/shows/femininfeminin/"}, {"@type": "ListItem", "name": "Strangers", "position": 77, "url": "https://queerframe.app/shows/strangers/"}, {"@type": "ListItem", "name": "Armistead Maupin\u2019s Tales of the City", "position": 78, "url": "https://queerframe.app/shows/armistead-maupins-tales-of-the-city/"}, {"@type": "ListItem", "name": "#Luimelia", "position": 79, "url": "https://queerframe.app/shows/luimelia/"}, {"@type": "ListItem", "name": "Family Law (Canada)", "position": 80, "url": "https://queerframe.app/shows/family-law-canada/"}, {"@type": "ListItem", "name": "Murdoch Mysteries", "position": 81, "url": "https://queerframe.app/shows/murdoch-mysteries/"}, {"@type": "ListItem", "name": "Servir y Proteger", "position": 82, "url": "https://queerframe.app/shows/servir-y-proteger/"}, {"@type": "ListItem", "name": "Harlem", "position": 83, "url": "https://queerframe.app/shows/harlem/"}, {"@type": "ListItem", "name": "The Fosters", "position": 84, "url": "https://queerframe.app/shows/the-fosters/"}, {"@type": "ListItem", "name": "Law \u0026 Order", "position": 85, "url": "https://queerframe.app/shows/law-order/"}, {"@type": "ListItem", "name": "Nip/Tuck", "position": 86, "url": "https://queerframe.app/shows/nip-tuck/"}, {"@type": "ListItem", "name": "Will \u0026 Grace", "position": 87, "url": "https://queerframe.app/shows/will-grace/"}, {"@type": "ListItem", "name": "Holby City", "position": 88, "url": "https://queerframe.app/shows/holby-city/"}, {"@type": "ListItem", "name": "Big Mouth", "position": 89, "url": "https://queerframe.app/shows/big-mouth/"}, {"@type": "ListItem", "name": "All Rise", "position": 90, "url": "https://queerframe.app/shows/all-rise/"}, {"@type": "ListItem", "name": "Hacks", "position": 91, "url": "https://queerframe.app/shows/hacks/"}, {"@type": "ListItem", "name": "A League of Their Own", "position": 92, "url": "https://queerframe.app/shows/a-league-of-their-own/"}, {"@type": "ListItem", "name": "Deadloch", "position": 93, "url": "https://queerframe.app/shows/deadloch/"}, {"@type": "ListItem", "name": "Pretty Little Liars", "position": 94, "url": "https://queerframe.app/shows/pretty-little-liars/"}, {"@type": "ListItem", "name": "Elementary", "position": 95, "url": "https://queerframe.app/shows/elementary/"}, {"@type": "ListItem", "name": "ER", "position": 96, "url": "https://queerframe.app/shows/er/"}, {"@type": "ListItem", "name": "All My Children", "position": 97, "url": "https://queerframe.app/shows/all-my-children/"}, {"@type": "ListItem", "name": "Home and Away", "position": 98, "url": "https://queerframe.app/shows/home-and-away/"}, {"@type": "ListItem", "name": "New Girl", "position": 99, "url": "https://queerframe.app/shows/new-girl/"}, {"@type": "ListItem", "name": "One Mississippi", "position": 100, "url": "https://queerframe.app/shows/one-mississippi/"}, {"@type": "ListItem", "name": "The Chi", "position": 101, "url": "https://queerframe.app/shows/the-chi/"}, {"@type": "ListItem", "name": "Koihime Mus\u014d", "position": 102, "url": "https://queerframe.app/shows/koihime-muso/"}, {"@type": "ListItem", "name": "Tuca \u0026 Bertie", "position": 103, "url": "https://queerframe.app/shows/tuca-bertie/"}, {"@type": "ListItem", "name": "The Fire \u0e42\u0e0b\u0e48\u0e23\u0e31\u0e01\u0e2d\u0e31\u0e04\u0e19\u0e35", "position": 104, "url": "https://queerframe.app/shows/the-fire-%e0%b9%82%e0%b8%8b%e0%b9%88%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%ad%e0%b8%b1%e0%b8%84%e0%b8%99%e0%b8%b5/"}, {"@type": "ListItem", "name": "Slo Pitch (Crave)", "position": 105, "url": "https://queerframe.app/shows/slo-pitch-crave/"}, {"@type": "ListItem", "name": "Prisoner: Cell Block H", "position": 106, "url": "https://queerframe.app/shows/prisoner-cell-block-h/"}, {"@type": "ListItem", "name": "Private Practice", "position": 107, "url": "https://queerframe.app/shows/private-practice/"}, {"@type": "ListItem", "name": "Steven Universe", "position": 108, "url": "https://queerframe.app/shows/steven-universe/"}, {"@type": "ListItem", "name": "Take My Wife", "position": 109, "url": "https://queerframe.app/shows/take-my-wife/"}, {"@type": "ListItem", "name": "The Flash", "position": 110, "url": "https://queerframe.app/shows/the-flash/"}, {"@type": "ListItem", "name": "Girl/Girl Scene", "position": 111, "url": "https://queerframe.app/shows/girl-girl-scene/"}, {"@type": "ListItem", "name": "House M.D.", "position": 112, "url": "https://queerframe.app/shows/house-md/"}, {"@type": "ListItem", "name": "Father Brown", "position": 113, "url": "https://queerframe.app/shows/father-brown/"}, {"@type": "ListItem", "name": "Grown-ish", "position": 114, "url": "https://queerframe.app/shows/grown-ish/"}, {"@type": "ListItem", "name": "Club Friday The Series", "position": 115, "url": "https://queerframe.app/shows/club-friday-the-series/"}, {"@type": "ListItem", "name": "Slo Pitch", "position": 116, "url": "https://queerframe.app/shows/slo-pitch/"}, {"@type": "ListItem", "name": "As Five", "position": 117, "url": "https://queerframe.app/shows/as-five/"}, {"@type": "ListItem", "name": "Lip Service", "position": 118, "url": "https://queerframe.app/shows/lip-service/"}, {"@type": "ListItem", "name": "Glee", "position": 119, "url": "https://queerframe.app/shows/glee/"}, {"@type": "ListItem", "name": "CSI: Crime Scene Investigation", "position": 120, "url": "https://queerframe.app/shows/csi/"}, {"@type": "ListItem", "name": "Law \u0026 Order: Criminal Intent", "position": 121, "url": "https://queerframe.app/shows/law-order-criminal-intent/"}, {"@type": "ListItem", "name": "Van Helsing", "position": 122, "url": "https://queerframe.app/shows/van-helsing/"}, {"@type": "ListItem", "name": "One Day at a Time", "position": 123, "url": "https://queerframe.app/shows/one-day-at-a-time/"}, {"@type": "ListItem", "name": "NCIS", "position": 124, "url": "https://queerframe.app/shows/ncis/"}, {"@type": "ListItem", "name": "Different For Girls", "position": 125, "url": "https://queerframe.app/shows/different-for-girls/"}, {"@type": "ListItem", "name": "Criminal Minds", "position": 126, "url": "https://queerframe.app/shows/criminal-minds/"}, {"@type": "ListItem", "name": "All American", "position": 127, "url": "https://queerframe.app/shows/all-american/"}, {"@type": "ListItem", "name": "Misfits", "position": 128, "url": "https://queerframe.app/shows/misfits/"}, {"@type": "ListItem", "name": "She-Ra and the Princesses of Power", "position": 129, "url": "https://queerframe.app/shows/she-ra-and-the-princesses-of-power/"}, {"@type": "ListItem", "name": "Craig of the Creek", "position": 130, "url": "https://queerframe.app/shows/craig-of-the-creek/"}, {"@type": "ListItem", "name": "Indebted", "position": 131, "url": "https://queerframe.app/shows/indebted/"}, {"@type": "ListItem", "name": "Transplant", "position": 132, "url": "https://queerframe.app/shows/transplant/"}, {"@type": "ListItem", "name": "4 estrellas", "position": 133, "url": "https://queerframe.app/shows/4-estrellas/"}, {"@type": "ListItem", "name": "The Pitt", "position": 134, "url": "https://queerframe.app/shows/the-pitt/"}, {"@type": "ListItem", "name": "Ellen", "position": 135, "url": "https://queerframe.app/shows/ellen/"}, {"@type": "ListItem", "name": "How to Get Away with Murder", "position": 136, "url": "https://queerframe.app/shows/how-to-get-away-with-murder/"}, {"@type": "ListItem", "name": "Dante\u2019s Cove", "position": 137, "url": "https://queerframe.app/shows/dantes-cove/"}, {"@type": "ListItem", "name": "Gute Zeiten, schlechte Zeiten", "position": 138, "url": "https://queerframe.app/shows/gute-zeiten-schlechte-zeiten/"}, {"@type": "ListItem", "name": "Empire", "position": 139, "url": "https://queerframe.app/shows/empire/"}, {"@type": "ListItem", "name": "Chicago Hope", "position": 140, "url": "https://queerframe.app/shows/chicago-hope/"}, {"@type": "ListItem", "name": "BoJack Horseman", "position": 141, "url": "https://queerframe.app/shows/bojack-horseman/"}, {"@type": "ListItem", "name": "RED", "position": 142, "url": "https://queerframe.app/shows/red/"}, {"@type": "ListItem", "name": "All For One", "position": 143, "url": "https://queerframe.app/shows/all-for-one/"}, {"@type": "ListItem", "name": "Barbelle", "position": 144, "url": "https://queerframe.app/shows/barbelle/"}, {"@type": "ListItem", "name": "The Good Doctor", "position": 145, "url": "https://queerframe.app/shows/the-good-doctor/"}, {"@type": "ListItem", "name": "ANNE+", "position": 146, "url": "https://queerframe.app/shows/anne/"}, {"@type": "ListItem", "name": "The Politician", "position": 147, "url": "https://queerframe.app/shows/the-politician/"}, {"@type": "ListItem", "name": "Hightown", "position": 148, "url": "https://queerframe.app/shows/hightown/"}, {"@type": "ListItem", "name": "The Owl House", "position": 149, "url": "https://queerframe.app/shows/the-owl-house/"}, {"@type": "ListItem", "name": "Madre Solo Hay Dos", "position": 150, "url": "https://queerframe.app/shows/madre-solo-hay-dos/"}, {"@type": "ListItem", "name": "Q-Force", "position": 151, "url": "https://queerframe.app/shows/q-force/"}, {"@type": "ListItem", "name": "The Morning Show", "position": 152, "url": "https://queerframe.app/shows/the-morning-show/"}, {"@type": "ListItem", "name": "Miraculous: Tales of Ladybug \u0026 Cat Noir", "position": 153, "url": "https://queerframe.app/shows/miraculous-tales-of-ladybug-cat-noir/"}, {"@type": "ListItem", "name": "Orphan Black: Echoes", "position": 154, "url": "https://queerframe.app/shows/orphan-black-echoes/"}, {"@type": "ListItem", "name": "Elsbeth", "position": 155, "url": "https://queerframe.app/shows/elsbeth/"}, {"@type": "ListItem", "name": "23.5 \u0e2d\u0e07\u0e28\u0e32\u0e17\u0e35\u0e48\u0e42\u0e25\u0e01\u0e40\u0e2d\u0e35\u0e22\u0e07", "position": 156, "url": "https://queerframe.app/shows/23-5-%e0%b8%ad%e0%b8%87%e0%b8%a8%e0%b8%b2%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b9%82%e0%b8%a5%e0%b8%81%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%87/"}, {"@type": "ListItem", "name": "The Mighty Nein", "position": 157, "url": "https://queerframe.app/shows/the-mighty-nein/"}, {"@type": "ListItem", "name": "The Earth \u0e27\u0e34\u0e27\u0e32\u0e2b\u0e4c\u0e1b\u0e10\u0e1e\u0e35", "position": 158, "url": "https://queerframe.app/shows/the-earth-%e0%b8%a7%e0%b8%b4%e0%b8%a7%e0%b8%b2%e0%b8%ab%e0%b9%8c%e0%b8%9b%e0%b8%90%e0%b8%9e%e0%b8%b5/"}, {"@type": "ListItem", "name": "The Water \u0e19\u0e17\u0e35\u0e23\u0e49\u0e2d\u0e22\u0e40\u0e25\u0e48\u0e2b\u0e4c", "position": 159, "url": "https://queerframe.app/shows/the-water-%e0%b8%99%e0%b8%97%e0%b8%b5%e0%b8%a3%e0%b9%89%e0%b8%ad%e0%b8%a2%e0%b9%80%e0%b8%a5%e0%b9%88%e0%b8%ab%e0%b9%8c/"}, {"@type": "ListItem", "name": "\u0e25\u0e31\u0e25\u0e25\u0e4c\u0e44\u0e21\u0e48\u0e0a\u0e2d\u0e1a\u0e44\u0e27\u0e19\u0e4c Enemies with benefits", "position": 160, "url": "https://queerframe.app/shows/%e0%b8%a5%e0%b8%b1%e0%b8%a5%e0%b8%a5%e0%b9%8c%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b8%8a%e0%b8%ad%e0%b8%9a%e0%b9%84%e0%b8%a7%e0%b8%99%e0%b9%8c-enemies-with-benefits/"}, {"@type": "ListItem", "name": "Rookie Blue", "position": 161, "url": "https://queerframe.app/shows/rookie-blue/"}, {"@type": "ListItem", "name": "South Of Nowhere", "position": 162, "url": "https://queerframe.app/shows/south-of-nowhere/"}, {"@type": "ListItem", "name": "True Blood", "position": 163, "url": "https://queerframe.app/shows/true-blood/"}, {"@type": "ListItem", "name": "NYPD Blue", "position": 164, "url": "https://queerframe.app/shows/nypd-blue/"}, {"@type": "ListItem", "name": "The Expanse", "position": 165, "url": "https://queerframe.app/shows/the-expanse/"}, {"@type": "ListItem", "name": "Younger", "position": 166, "url": "https://queerframe.app/shows/younger/"}, {"@type": "ListItem", "name": "Mistresses (US)", "position": 167, "url": "https://queerframe.app/shows/mistresses-us/"}, {"@type": "ListItem", "name": "Saving Hope", "position": 168, "url": "https://queerframe.app/shows/saving-hope/"}, {"@type": "ListItem", "name": "Beverly Hills, 90210", "position": 169, "url": "https://queerframe.app/shows/beverly-hills-90210/"}, {"@type": "ListItem", "name": "Degrassi: Next Class", "position": 170, "url": "https://queerframe.app/shows/degrassi-next-class/"}, {"@type": "ListItem", "name": "Cucumber", "position": 171, "url": "https://queerframe.app/shows/cucumber/"}, {"@type": "ListItem", "name": "Banana", "position": 172, "url": "https://queerframe.app/shows/banana/"}, {"@type": "ListItem", "name": "Waterloo Road", "position": 173, "url": "https://queerframe.app/shows/waterloo-road/"}, {"@type": "ListItem", "name": "Blue Bloods", "position": 174, "url": "https://queerframe.app/shows/blue-bloods/"}, {"@type": "ListItem", "name": "Queen Sugar", "position": 175, "url": "https://queerframe.app/shows/queen-sugar/"}, {"@type": "ListItem", "name": "Curb Your Enthusiasm", "position": 176, "url": "https://queerframe.app/shows/curb-your-enthusiasm/"}, {"@type": "ListItem", "name": "Granchester", "position": 177, "url": "https://queerframe.app/shows/granchester/"}, {"@type": "ListItem", "name": "Vis a Vis", "position": 178, "url": "https://queerframe.app/shows/vis-a-vis/"}, {"@type": "ListItem", "name": "RWBY", "position": 179, "url": "https://queerframe.app/shows/rwby/"}, {"@type": "ListItem", "name": "Death in Paradise", "position": 180, "url": "https://queerframe.app/shows/death-in-paradise/"}, {"@type": "ListItem", "name": "YuruYuri", "position": 181, "url": "https://queerframe.app/shows/yuruyuri/"}, {"@type": "ListItem", "name": "A Place to Call Home", "position": 182, "url": "https://queerframe.app/shows/a-place-to-call-home/"}, {"@type": "ListItem", "name": "The Dragon Prince", "position": 183, "url": "https://queerframe.app/shows/the-dragon-prince/"}, {"@type": "ListItem", "name": "Bliss", "position": 184, "url": "https://queerframe.app/shows/bliss/"}, {"@type": "ListItem", "name": "Almost Family", "position": 185, "url": "https://queerframe.app/shows/almost-family/"}, {"@type": "ListItem", "name": "Nancy Drew", "position": 186, "url": "https://queerframe.app/shows/nancy-drew/"}, {"@type": "ListItem", "name": "Demain nous appartient", "position": 187, "url": "https://queerframe.app/shows/demain-nous-appartient/"}, {"@type": "ListItem", "name": "BIFL", "position": 188, "url": "https://queerframe.app/shows/bifl/"}, {"@type": "ListItem", "name": "Twenties", "position": 189, "url": "https://queerframe.app/shows/twenties/"}, {"@type": "ListItem", "name": "Nurses", "position": 190, "url": "https://queerframe.app/shows/nurses/"}, {"@type": "ListItem", "name": "Diary of a Future President", "position": 191, "url": "https://queerframe.app/shows/diary-of-a-future-president/"}, {"@type": "ListItem", "name": "\u00c9lite", "position": 192, "url": "https://queerframe.app/shows/elite/"}, {"@type": "ListItem", "name": "Valeria", "position": 193, "url": "https://queerframe.app/shows/valeria/"}, {"@type": "ListItem", "name": "Van der Valk", "position": 194, "url": "https://queerframe.app/shows/van-der-valk/"}, {"@type": "ListItem", "name": "Chicago Med", "position": 195, "url": "https://queerframe.app/shows/chicago-med/"}, {"@type": "ListItem", "name": "Ginny \u0026 Georgia", "position": 196, "url": "https://queerframe.app/shows/ginny-georgia/"}, {"@type": "ListItem", "name": "iCarly", "position": 197, "url": "https://queerframe.app/shows/icarly/"}, {"@type": "ListItem", "name": "NCIS: Hawai\u2019i", "position": 198, "url": "https://queerframe.app/shows/ncis-hawaii/"}, {"@type": "ListItem", "name": "The Legend of Vox Machina", "position": 199, "url": "https://queerframe.app/shows/the-legend-of-vox-machina/"}, {"@type": "ListItem", "name": "Ted Lasso", "position": 200, "url": "https://queerframe.app/shows/ted-lasso/"}, {"@type": "ListItem", "name": "4400", "position": 201, "url": "https://queerframe.app/shows/4400/"}, {"@type": "ListItem", "name": "Ici tout Commence", "position": 202, "url": "https://queerframe.app/shows/ici-tout-commence/"}, {"@type": "ListItem", "name": "Human Resources", "position": 203, "url": "https://queerframe.app/shows/human-resources/"}, {"@type": "ListItem", "name": "Dead End: Paranormal Park", "position": 204, "url": "https://queerframe.app/shows/dead-end-paranormal-park/"}, {"@type": "ListItem", "name": "The Rookie: Feds", "position": 205, "url": "https://queerframe.app/shows/the-rookie-feds/"}, {"@type": "ListItem", "name": "Will Trent", "position": 206, "url": "https://queerframe.app/shows/will-trent/"}, {"@type": "ListItem", "name": "Moon Girl \u0026 Devil Dinosaur", "position": 207, "url": "https://queerframe.app/shows/moon-girl-devil-dinosaur/"}, {"@type": "ListItem", "name": "\u0e23\u0e31\u0e01\u0e2a\u0e38\u0e14\u0e17\u0e49\u0e32\u0e22 My Safe Zone", "position": 208, "url": "https://queerframe.app/shows/%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%aa%e0%b8%b8%e0%b8%94%e0%b8%97%e0%b9%89%e0%b8%b2%e0%b8%a2-my-safe-zone/"}, {"@type": "ListItem", "name": "Pluto \u0e19\u0e34\u0e17\u0e32\u0e19 \u0e14\u0e27\u0e07\u0e14\u0e32\u0e27 \u0e04\u0e27\u0e32\u0e21\u0e23\u0e31\u0e01", "position": 209, "url": "https://queerframe.app/shows/pluto-%e0%b8%99%e0%b8%b4%e0%b8%97%e0%b8%b2%e0%b8%99-%e0%b8%94%e0%b8%a7%e0%b8%87%e0%b8%94%e0%b8%b2%e0%b8%a7-%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%a3%e0%b8%b1%e0%b8%81/"}, {"@type": "ListItem", "name": "Skins", "position": 210, "url": "https://queerframe.app/shows/skins/"}, {"@type": "ListItem", "name": "Chicago Fire", "position": 211, "url": "https://queerframe.app/shows/chicago-fire/"}, {"@type": "ListItem", "name": "Star Trek: Deep Space Nine", "position": 212, "url": "https://queerframe.app/shows/star-trek-deep-space-nine/"}, {"@type": "ListItem", "name": "Roseanne", "position": 213, "url": "https://queerframe.app/shows/roseanne/"}, {"@type": "ListItem", "name": "Bones", "position": 214, "url": "https://queerframe.app/shows/bones/"}, {"@type": "ListItem", "name": "Bob\u2019s Burgers", "position": 215, "url": "https://queerframe.app/shows/bobs-burgers/"}, {"@type": "ListItem", "name": "The Good Fight", "position": 216, "url": "https://queerframe.app/shows/the-good-fight/"}, {"@type": "ListItem", "name": "Plus Belle La Vie", "position": 217, "url": "https://queerframe.app/shows/plus-belle-la-vie/"}, {"@type": "ListItem", "name": "Star", "position": 218, "url": "https://queerframe.app/shows/star/"}, {"@type": "ListItem", "name": "Doubt", "position": 219, "url": "https://queerframe.app/shows/doubt/"}, {"@type": "ListItem", "name": "The Blacklist", "position": 220, "url": "https://queerframe.app/shows/the-blacklist/"}, {"@type": "ListItem", "name": "Sweet Blue Flowers", "position": 221, "url": "https://queerframe.app/shows/sweet-blue-flowers/"}, {"@type": "ListItem", "name": "Dear White People", "position": 222, "url": "https://queerframe.app/shows/dear-white-people/"}, {"@type": "ListItem", "name": "Harlots", "position": 223, "url": "https://queerframe.app/shows/harlots/"}, {"@type": "ListItem", "name": "Rent Controlled", "position": 224, "url": "https://queerframe.app/shows/rent-controlled/"}, {"@type": "ListItem", "name": "The Deuce", "position": 225, "url": "https://queerframe.app/shows/the-deuce/"}, {"@type": "ListItem", "name": "Star Trek: Discovery", "position": 226, "url": "https://queerframe.app/shows/star-trek-discovery/"}, {"@type": "ListItem", "name": "Starting From \u2026 Now!", "position": 227, "url": "https://queerframe.app/shows/starting-from-now/"}, {"@type": "ListItem", "name": "Til Lease Do Us Part", "position": 228, "url": "https://queerframe.app/shows/til-lease-do-us-part/"}, {"@type": "ListItem", "name": "Portlandia", "position": 229, "url": "https://queerframe.app/shows/portlandia/"}, {"@type": "ListItem", "name": "Slasher", "position": 230, "url": "https://queerframe.app/shows/slasher/"}, {"@type": "ListItem", "name": "Legacies", "position": 231, "url": "https://queerframe.app/shows/legacies/"}, {"@type": "ListItem", "name": "Crazy Bitches", "position": 232, "url": "https://queerframe.app/shows/crazy-bitches/"}, {"@type": "ListItem", "name": "High Maintenance", "position": 233, "url": "https://queerframe.app/shows/high-maintenance/"}, {"@type": "ListItem", "name": "Citrus", "position": 234, "url": "https://queerframe.app/shows/citrus/"}, {"@type": "ListItem", "name": "Tachibanakan To Lie Angle", "position": 235, "url": "https://queerframe.app/shows/tachibanakan-to-lie-angle/"}, {"@type": "ListItem", "name": "Coroner", "position": 236, "url": "https://queerframe.app/shows/coroner/"}, {"@type": "ListItem", "name": "In the Dark", "position": 237, "url": "https://queerframe.app/shows/in-the-dark/"}, {"@type": "ListItem", "name": "The Boys", "position": 238, "url": "https://queerframe.app/shows/the-boys/"}, {"@type": "ListItem", "name": "Why Women Kill", "position": 239, "url": "https://queerframe.app/shows/why-women-kill/"}, {"@type": "ListItem", "name": "Motherland: Fort Salem", "position": 240, "url": "https://queerframe.app/shows/motherland-fort-salem/"}, {"@type": "ListItem", "name": "The Fortnight", "position": 241, "url": "https://queerframe.app/shows/the-fortnight/"}, {"@type": "ListItem", "name": "Roswell, New Mexico", "position": 242, "url": "https://queerframe.app/shows/roswell-new-mexico/"}, {"@type": "ListItem", "name": "Never Have I Ever", "position": 243, "url": "https://queerframe.app/shows/never-have-i-ever/"}, {"@type": "ListItem", "name": "Betty", "position": 244, "url": "https://queerframe.app/shows/betty/"}, {"@type": "ListItem", "name": "Snowpiercer", "position": 245, "url": "https://queerframe.app/shows/snowpiercer/"}, {"@type": "ListItem", "name": "The Baby-Sitters Club", "position": 246, "url": "https://queerframe.app/shows/the-baby-sitters-club/"}, {"@type": "ListItem", "name": "Lovecraft Country", "position": 247, "url": "https://queerframe.app/shows/lovecraft-country/"}, {"@type": "ListItem", "name": "Tatort", "position": 248, "url": "https://queerframe.app/shows/tatort/"}, {"@type": "ListItem", "name": "The Great North", "position": 249, "url": "https://queerframe.app/shows/the-great-north/"}, {"@type": "ListItem", "name": "Home Economics", "position": 250, "url": "https://queerframe.app/shows/home-economics/"}, {"@type": "ListItem", "name": "Helluva Boss", "position": 251, "url": "https://queerframe.app/shows/helluva-boss/"}, {"@type": "ListItem", "name": "The Equalizer", "position": 252, "url": "https://queerframe.app/shows/the-equalizer/"}, {"@type": "ListItem", "name": "Only Murders in the Building", "position": 253, "url": "https://queerframe.app/shows/only-murders-in-the-building/"}, {"@type": "ListItem", "name": "One Piece", "position": 254, "url": "https://queerframe.app/shows/one-piece/"}, {"@type": "ListItem", "name": "Doom Patrol", "position": 255, "url": "https://queerframe.app/shows/doom-patrol/"}, {"@type": "ListItem", "name": "Chucky", "position": 256, "url": "https://queerframe.app/shows/chucky/"}, {"@type": "ListItem", "name": "Harry Wild", "position": 257, "url": "https://queerframe.app/shows/harry-wild/"}, {"@type": "ListItem", "name": "Agatha Raisin", "position": 258, "url": "https://queerframe.app/shows/agatha-raisin/"}, {"@type": "ListItem", "name": "Pretty Little Liars: Original Sin", "position": 259, "url": "https://queerframe.app/shows/pretty-little-liars-original-sin/"}, {"@type": "ListItem", "name": "The Sandman", "position": 260, "url": "https://queerframe.app/shows/the-sandman/"}, {"@type": "ListItem", "name": "The Power", "position": 261, "url": "https://queerframe.app/shows/the-power/"}, {"@type": "ListItem", "name": "The Fall of the House of Usher", "position": 262, "url": "https://queerframe.app/shows/the-fall-of-the-house-of-usher/"}, {"@type": "ListItem", "name": "De Volta aos 15", "position": 263, "url": "https://queerframe.app/shows/de-volta-aos-15/"}, {"@type": "ListItem", "name": "The Secret of Us \u0e08\u0e0b\u0e48\u0e2d\u0e19\u0e23\u0e31\u0e01", "position": 264, "url": "https://queerframe.app/shows/the-secret-of-us/"}, {"@type": "ListItem", "name": "The Loyal Pin \u0e1b\u0e34\u0e48\u0e19\u0e20\u0e31\u0e01\u0e14\u0e34\u0e4c", "position": 265, "url": "https://queerframe.app/shows/%e0%b8%9b%e0%b8%b4%e0%b9%88%e0%b8%99%e0%b8%a0%e0%b8%b1%e0%b8%81%e0%b8%94%e0%b8%b4%e0%b9%8c-the-loyal-pin/"}, {"@type": "ListItem", "name": "Only You \u0e40\u0e1e\u0e35\u0e22\u0e07\u0e40\u0e18\u0e2d", "position": 266, "url": "https://queerframe.app/shows/only-you/"}, {"@type": "ListItem", "name": "\u0e23\u0e31\u0e1a(\u0e23\u0e31\u0e01)\u0e2d\u0e2d\u0e01\u0e41\u0e1a\u0e1a Love design", "position": 267, "url": "https://queerframe.app/shows/%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%ad%e0%b8%ad%e0%b8%81%e0%b9%81%e0%b8%9a%e0%b8%9a-love-design/"}, {"@type": "ListItem", "name": "Chasing Life", "position": 268, "url": "https://queerframe.app/shows/chasing-life/"}, {"@type": "ListItem", "name": "East Los High", "position": 269, "url": "https://queerframe.app/shows/east-los-high/"}, {"@type": "ListItem", "name": "The Wire", "position": 270, "url": "https://queerframe.app/shows/the-wire/"}, {"@type": "ListItem", "name": "Friends", "position": 271, "url": "https://queerframe.app/shows/friends/"}, {"@type": "ListItem", "name": "Queer as Folk (US)", "position": 272, "url": "https://queerframe.app/shows/queer-folk-us/"}, {"@type": "ListItem", "name": "The Magicians", "position": 273, "url": "https://queerframe.app/shows/the-magicians/"}, {"@type": "ListItem", "name": "Lindenstra\u00dfe", "position": 274, "url": "https://queerframe.app/shows/lindenstrase/"}, {"@type": "ListItem", "name": "Once Upon a Time", "position": 275, "url": "https://queerframe.app/shows/once-upon-a-time/"}, {"@type": "ListItem", "name": "Torchwood", "position": 276, "url": "https://queerframe.app/shows/torchwood/"}, {"@type": "ListItem", "name": "The Vampire Diaries", "position": 277, "url": "https://queerframe.app/shows/the-vampire-diaries/"}, {"@type": "ListItem", "name": "Code Black", "position": 278, "url": "https://queerframe.app/shows/code-black/"}, {"@type": "ListItem", "name": "Call the Midwife", "position": 279, "url": "https://queerframe.app/shows/call-the-midwife/"}, {"@type": "ListItem", "name": "Out of Practice", "position": 280, "url": "https://queerframe.app/shows/out-of-practice/"}, {"@type": "ListItem", "name": "Survivor\u2019s Remorse", "position": 281, "url": "https://queerframe.app/shows/survivors-remorse/"}, {"@type": "ListItem", "name": "Black-ish", "position": 282, "url": "https://queerframe.app/shows/black-ish/"}, {"@type": "ListItem", "name": "Miss Fisher\u2019s Murder Mysteries", "position": 283, "url": "https://queerframe.app/shows/miss-fishers-murder-mysteries/"}, {"@type": "ListItem", "name": "Veronica Mars", "position": 284, "url": "https://queerframe.app/shows/veronica-mars/"}, {"@type": "ListItem", "name": "Without a Trace", "position": 285, "url": "https://queerframe.app/shows/without-a-trace/"}, {"@type": "ListItem", "name": "Family Guy", "position": 286, "url": "https://queerframe.app/shows/family-guy/"}, {"@type": "ListItem", "name": "The Bold and The Beautiful", "position": 287, "url": "https://queerframe.app/shows/the-bold-and-the-beautiful/"}, {"@type": "ListItem", "name": "The Mindy Project", "position": 288, "url": "https://queerframe.app/shows/the-mindy-project/"}, {"@type": "ListItem", "name": "Game of Thrones", "position": 289, "url": "https://queerframe.app/shows/game-of-thrones/"}, {"@type": "ListItem", "name": "General Hospital", "position": 290, "url": "https://queerframe.app/shows/general-hospital/"}, {"@type": "ListItem", "name": "Casual", "position": 291, "url": "https://queerframe.app/shows/casual/"}, {"@type": "ListItem", "name": "The Girlfriend Experience", "position": 292, "url": "https://queerframe.app/shows/the-girlfriend-experience/"}, {"@type": "ListItem", "name": "Crazy Ex-Girlfriend", "position": 293, "url": "https://queerframe.app/shows/crazy-ex-girlfriend/"}, {"@type": "ListItem", "name": "Westworld", "position": 294, "url": "https://queerframe.app/shows/westworld/"}, {"@type": "ListItem", "name": "Out with Dad", "position": 295, "url": "https://queerframe.app/shows/out-with-dad/"}, {"@type": "ListItem", "name": "Lipstick: The Series", "position": 296, "url": "https://queerframe.app/shows/lipstick-the-series/"}, {"@type": "ListItem", "name": "Hourou Musuko", "position": 297, "url": "https://queerframe.app/shows/hourou-musuko/"}, {"@type": "ListItem", "name": "Workin\u2019 Moms", "position": 298, "url": "https://queerframe.app/shows/workin-moms/"}, {"@type": "ListItem", "name": "Revolutionary Girl Utena", "position": 299, "url": "https://queerframe.app/shows/revolutionary-girl-utena/"}, {"@type": "ListItem", "name": "Sakura Trick", "position": 300, "url": "https://queerframe.app/shows/sakura-trick/"}, {"@type": "ListItem", "name": "13 Reasons Why", "position": 301, "url": "https://queerframe.app/shows/13-reasons-why/"}, {"@type": "ListItem", "name": "Number 96", "position": 302, "url": "https://queerframe.app/shows/number-96/"}, {"@type": "ListItem", "name": "3Way", "position": 303, "url": "https://queerframe.app/shows/3way/"}, {"@type": "ListItem", "name": "Girlfriends", "position": 304, "url": "https://queerframe.app/shows/girlfriends/"}, {"@type": "ListItem", "name": "Paradise Falls", "position": 305, "url": "https://queerframe.app/shows/paradise-falls/"}, {"@type": "ListItem", "name": "American Dad!", "position": 306, "url": "https://queerframe.app/shows/american-dad/"}, {"@type": "ListItem", "name": "Fair City", "position": 307, "url": "https://queerframe.app/shows/fair-city/"}, {"@type": "ListItem", "name": "Anyone But Me", "position": 308, "url": "https://queerframe.app/shows/anyone-but-me/"}, {"@type": "ListItem", "name": "Scandal", "position": 309, "url": "https://queerframe.app/shows/scandal/"}, {"@type": "ListItem", "name": "Brooklyn Nine-Nine", "position": 310, "url": "https://queerframe.app/shows/brooklyn-nine-nine/"}, {"@type": "ListItem", "name": "SWAT", "position": 311, "url": "https://queerframe.app/shows/swat/"}, {"@type": "ListItem", "name": "Black Lightning", "position": 312, "url": "https://queerframe.app/shows/black-lightning/"}, {"@type": "ListItem", "name": "The Loud House", "position": 313, "url": "https://queerframe.app/shows/the-loud-house/"}, {"@type": "ListItem", "name": "Better Things", "position": 314, "url": "https://queerframe.app/shows/better-things/"}, {"@type": "ListItem", "name": "Malha\u00e7\u00e3o", "position": 315, "url": "https://queerframe.app/shows/malhacao/"}, {"@type": "ListItem", "name": "9-1-1", "position": 316, "url": "https://queerframe.app/shows/9-1-1/"}, {"@type": "ListItem", "name": "Madam Secretary", "position": 317, "url": "https://queerframe.app/shows/madam-secretary/"}, {"@type": "ListItem", "name": "Ackley Bridge", "position": 318, "url": "https://queerframe.app/shows/ackley-bridge/"}, {"@type": "ListItem", "name": "Siren", "position": 319, "url": "https://queerframe.app/shows/siren/"}, {"@type": "ListItem", "name": "Chica Busca Chica", "position": 320, "url": "https://queerframe.app/shows/chica-busca-chica/"}, {"@type": "ListItem", "name": "Ikki Tousen", "position": 321, "url": "https://queerframe.app/shows/ikki-tousen/"}, {"@type": "ListItem", "name": "La Casa de las Flores", "position": 322, "url": "https://queerframe.app/shows/la-casa-de-las-flores/"}, {"@type": "ListItem", "name": "Manifest", "position": 323, "url": "https://queerframe.app/shows/manifest/"}, {"@type": "ListItem", "name": "The Bisexual", "position": 324, "url": "https://queerframe.app/shows/the-bisexual/"}, {"@type": "ListItem", "name": "Flunk", "position": 325, "url": "https://queerframe.app/shows/flunk/"}, {"@type": "ListItem", "name": "Cross Ange", "position": 326, "url": "https://queerframe.app/shows/cross-ange/"}, {"@type": "ListItem", "name": "Flack", "position": 327, "url": "https://queerframe.app/shows/flack/"}, {"@type": "ListItem", "name": "Shrill", "position": 328, "url": "https://queerframe.app/shows/shrill/"}, {"@type": "ListItem", "name": "Good Omens", "position": 329, "url": "https://queerframe.app/shows/good-omens/"}, {"@type": "ListItem", "name": "3%", "position": 330, "url": "https://queerframe.app/shows/3/"}, {"@type": "ListItem", "name": "Clique", "position": 331, "url": "https://queerframe.app/shows/clique/"}, {"@type": "ListItem", "name": "For All Mankind", "position": 332, "url": "https://queerframe.app/shows/for-all-mankind/"}, {"@type": "ListItem", "name": "High School Musical: The Musical: The Series", "position": 333, "url": "https://queerframe.app/shows/high-school-musical-the-musical-the-series/"}, {"@type": "ListItem", "name": "Harley Quinn", "position": 334, "url": "https://queerframe.app/shows/harley-quinn/"}, {"@type": "ListItem", "name": "Control Z", "position": 335, "url": "https://queerframe.app/shows/control-z/"}, {"@type": "ListItem", "name": "Mrs. America", "position": 336, "url": "https://queerframe.app/shows/mrs-america/"}, {"@type": "ListItem", "name": "Avocado Toast", "position": 337, "url": "https://queerframe.app/shows/avocado-toast/"}, {"@type": "ListItem", "name": "L.A.\u2019s Finest", "position": 338, "url": "https://queerframe.app/shows/las-finest/"}, {"@type": "ListItem", "name": "We Are Who We Are", "position": 339, "url": "https://queerframe.app/shows/we-are-who-we-are/"}, {"@type": "ListItem", "name": "Unforgotten", "position": 340, "url": "https://queerframe.app/shows/unforgotten/"}, {"@type": "ListItem", "name": "Law \u0026 Order: Organized Crime", "position": 341, "url": "https://queerframe.app/shows/law-order-organized-crime/"}, {"@type": "ListItem", "name": "American Horror Stories", "position": 342, "url": "https://queerframe.app/shows/american-horror-stories/"}, {"@type": "ListItem", "name": "Fantasy Island", "position": 343, "url": "https://queerframe.app/shows/fantasy-island/"}, {"@type": "ListItem", "name": "Leverage: Redemption", "position": 344, "url": "https://queerframe.app/shows/leverage-redemption/"}, {"@type": "ListItem", "name": "Dexter", "position": 345, "url": "https://queerframe.app/shows/dexter/"}, {"@type": "ListItem", "name": "Amphibia", "position": 346, "url": "https://queerframe.app/shows/amphibia/"}, {"@type": "ListItem", "name": "Single Drunk Female", "position": 347, "url": "https://queerframe.app/shows/single-drunk-female/"}, {"@type": "ListItem", "name": "A Million Little Things", "position": 348, "url": "https://queerframe.app/shows/a-million-little-things/"}, {"@type": "ListItem", "name": "And Just Like That\u2026", "position": 349, "url": "https://queerframe.app/shows/and-just-like-that/"}, {"@type": "ListItem", "name": "Les petits meurtres d\u2019Agatha Christie", "position": 350, "url": "https://queerframe.app/shows/les-petits-meurtres-dagatha-christie/"}, {"@type": "ListItem", "name": "So Help Me Todd", "position": 351, "url": "https://queerframe.app/shows/so-help-me-todd/"}, {"@type": "ListItem", "name": "Fire Country", "position": 352, "url": "https://queerframe.app/shows/fire-country/"}, {"@type": "ListItem", "name": "Ghosts (US)", "position": 353, "url": "https://queerframe.app/shows/ghosts-us/"}, {"@type": "ListItem", "name": "Velma", "position": 354, "url": "https://queerframe.app/shows/velma/"}, {"@type": "ListItem", "name": "Beyond Paradise", "position": 355, "url": "https://queerframe.app/shows/beyond-paradise/"}, {"@type": "ListItem", "name": "Adventure Time: Fionna \u0026 Cake", "position": 356, "url": "https://queerframe.app/shows/adventure-time-fionna-cake/"}, {"@type": "ListItem", "name": "Dead Ringers", "position": 357, "url": "https://queerframe.app/shows/dead-ringers/"}, {"@type": "ListItem", "name": "Paper Dolls", "position": 358, "url": "https://queerframe.app/shows/paper-dolls/"}, {"@type": "ListItem", "name": "My Adventures with Superman", "position": 359, "url": "https://queerframe.app/shows/my-adventures-with-superman/"}, {"@type": "ListItem", "name": "The Mentalist", "position": 360, "url": "https://queerframe.app/shows/the-mentalist/"}, {"@type": "ListItem", "name": "HPI: Haut Potentiel Intellectuel", "position": 361, "url": "https://queerframe.app/shows/hpi/"}, {"@type": "ListItem", "name": "Terra e Paix\u00e3o", "position": 362, "url": "https://queerframe.app/shows/terra-e-paixao/"}, {"@type": "ListItem", "name": "Brilliant Minds", "position": 363, "url": "https://queerframe.app/shows/brilliant-minds/"}, {"@type": "ListItem", "name": "FROM", "position": 364, "url": "https://queerframe.app/shows/from/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header>
+<div class="masthead">
+<svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#2b1740"/><path d="M13 0h12a7 7 0 0 1 7 7v19z" fill="#ff6f4f"/><path d="M12 10v12l10-6z" fill="#fbf3ee"/></svg>
+
+<p class="brand"><a href="https://queerframe.app/">Queer Frame</a></p>
+</div>
+<nav aria-label="Breadcrumb">
+<ol class="crumbs">
+<li><a href="https://queerframe.app/">Queer Frame</a></li>
+<li><span aria-current="page">Shows</span></li>
+</ol>
+</nav>
+</header>
+<main id="main">
+
+<h1>Do queer characters die? Queer TV shows, spoiler-free</h1>
+<p>Before you start a show, check whether it falls into the bury-your-gays trope. Pick a show to see its LGBTQ characters. Each page keeps the full answer to "does she die" closed until you open it, so you decide whether to be spoiled. The answers come from the records of LezWatch.TV.</p>
+<p>364 shows have a page.</p>
+<p><a href="https://queerframe.app/airing/">Queer TV airing now: shows with a new episode coming up</a></p>
+<h2 id="hand-picked">Hand-picked shows</h2>
+<ul class="shows">
+<li><a href="the-l-word/">The L Word</a> (2004 to 2009)</li>
+<li><a href="the-l-word-generation-q/">The L Word: Generation Q</a> (2019 to 2023)</li>
+<li><a href="orange-is-the-new-black/">Orange is the New Black</a> (2013 to 2019)</li>
+<li><a href="pose/">Pose</a> (2018 to 2021)</li>
+<li><a href="sense8/">Sense8</a> (2015 to 2018)</li>
+<li><a href="batwoman/">Batwoman</a> (2019 to 2022)</li>
+<li><a href="wentworth/">Wentworth</a> (2013 to 2021)</li>
+<li><a href="vida/">Vida</a> (2018 to 2020)</li>
+<li><a href="good-trouble/">Good Trouble</a> (2019 to 2024)</li>
+<li><a href="the-bold-type/">The Bold Type</a> (2017 to 2021)</li>
+<li><a href="killing-eve/">Killing Eve</a> (2018 to 2022)</li>
+<li><a href="the-100/">The 100</a> (2014 to 2020)</li>
+<li><a href="buffy-the-vampire-slayer/">Buffy The Vampire Slayer</a> (1997 to 2003)</li>
+<li><a href="wynonna-earp/">Wynonna Earp</a> (2016 to 2021)</li>
+<li><a href="supergirl/">Supergirl</a> (2015 to 2021)</li>
+<li><a href="our-flag-means-death/">Our Flag Means Death</a> (2022 to 2023)</li>
+<li><a href="heartstopper/">Heartstopper</a> (2022 to 2026)</li>
+<li><a href="gentleman-jack/">Gentleman Jack</a> (2019 to 2022)</li>
+<li><a href="first-kill/">First Kill</a> (2022)</li>
+<li><a href="warrior-nun/">Warrior Nun</a> (2020 to 2022)</li>
+<li><a href="sex-education/">Sex Education</a> (2019 to 2023)</li>
+<li><a href="yellowjackets/">Yellowjackets</a> (2021 to present)</li>
+<li><a href="schitts-creek/">Schitt’s Creek</a> (2015 to 2020)</li>
+<li><a href="euphoria/">Euphoria</a> (2019 to 2026)</li>
+<li><a href="legends-of-tomorrow/">Legends of Tomorrow</a> (2016 to 2022)</li>
+<li><a href="shameless-us/">Shameless (US)</a> (2011 to 2021)</li>
+<li><a href="greys-anatomy/">Grey’s Anatomy</a> (2005 to present)</li>
+<li><a href="law-order-special-victims-unit/">Law &amp; Order: Special Victims Unit</a> (1999 to present)</li>
+<li><a href="american-horror-story/">American Horror Story</a> (2011 to present)</li>
+<li><a href="doctor-who/">Doctor Who (2005)</a> (2005 to 2022)</li>
+<li><a href="supernatural/">Supernatural</a> (2005 to 2020)</li>
+<li><a href="the-walking-dead/">The Walking Dead</a> (2010 to 2022)</li>
+<li><a href="black-mirror/">Black Mirror</a> (2011 to present)</li>
+<li><a href="the-last-of-us/">The Last of Us</a> (2023 to present)</li>
+<li><a href="orphan-black/">Orphan Black</a> (2013 to 2017)</li>
+<li><a href="lost-girl/">Lost Girl</a> (2010 to 2016)</li>
+<li><a href="carmilla/">Carmilla</a> (2014 to 2016)</li>
+<li><a href="faking-it/">Faking It</a> (2014 to 2016)</li>
+<li><a href="degrassi-tng/">Degrassi: The Next Generation</a> (2001 to 2015)</li>
+<li><a href="grace-and-frankie/">Grace and Frankie</a> (2015 to 2020)</li>
+<li><a href="transparent/">Transparent</a> (2014 to 2019)</li>
+<li><a href="feel-good/">Feel Good</a> (2020 to 2021)</li>
+<li><a href="gen-v/">Gen V</a> (2023 to 2025)</li>
+<li><a href="shadow-and-bone/">Shadow and Bone</a> (2021 to 2023)</li>
+<li><a href="the-handmaids-tale/">The Handmaid’s Tale</a> (2017 to 2025)</li>
+<li><a href="station-19/">Station 19</a> (2018 to 2024)</li>
+<li><a href="riverdale/">Riverdale</a> (2017 to 2023)</li>
+<li><a href="cobra-kai/">Cobra Kai</a> (2018 to 2023)</li>
+<li><a href="jane-the-virgin/">Jane the Virgin</a> (2014 to 2019)</li>
+<li><a href="the-good-wife/">The Good Wife</a> (2009 to 2016)</li>
+</ul>
+<h2 id="a-to-z">All shows, A to Z</h2>
+<nav aria-label="Jump to a letter">
+<ul class="letters">
+<li><a href="#letter-other">#</a></li>
+<li><a href="#letter-a">A</a></li>
+<li><a href="#letter-b">B</a></li>
+<li><a href="#letter-c">C</a></li>
+<li><a href="#letter-d">D</a></li>
+<li><a href="#letter-e">E</a></li>
+<li><a href="#letter-f">F</a></li>
+<li><a href="#letter-g">G</a></li>
+<li><a href="#letter-h">H</a></li>
+<li><a href="#letter-i">I</a></li>
+<li><a href="#letter-j">J</a></li>
+<li><a href="#letter-k">K</a></li>
+<li><a href="#letter-l">L</a></li>
+<li><a href="#letter-m">M</a></li>
+<li><a href="#letter-n">N</a></li>
+<li><a href="#letter-o">O</a></li>
+<li><a href="#letter-p">P</a></li>
+<li><a href="#letter-q">Q</a></li>
+<li><a href="#letter-r">R</a></li>
+<li><a href="#letter-s">S</a></li>
+<li><a href="#letter-t">T</a></li>
+<li><a href="#letter-u">U</a></li>
+<li><a href="#letter-v">V</a></li>
+<li><a href="#letter-w">W</a></li>
+<li><a href="#letter-y">Y</a></li>
+</ul>
+</nav>
+<h3 id="letter-other"># (numbers, symbols and other scripts)</h3>
+<ul class="shows">
+<li><a href="luimelia/">#Luimelia</a> (2020 to 2022)</li>
+<li><a href="the-100/">The 100</a> (2014 to 2020)</li>
+<li><a href="13-reasons-why/">13 Reasons Why</a> (2017 to 2020)</li>
+<li><a href="23-5-%e0%b8%ad%e0%b8%87%e0%b8%a8%e0%b8%b2%e0%b8%97%e0%b8%b5%e0%b9%88%e0%b9%82%e0%b8%a5%e0%b8%81%e0%b9%80%e0%b8%ad%e0%b8%b5%e0%b8%a2%e0%b8%87/">23.5 องศาที่โลกเอียง</a> (2024)</li>
+<li><a href="3/">3%</a> (2016 to 2020)</li>
+<li><a href="3way/">3Way</a> (2008 to 2009)</li>
+<li><a href="4-estrellas/">4 estrellas</a> (2023 to 2024)</li>
+<li><a href="4400/">4400</a> (2021 to 2022)</li>
+<li><a href="9-1-1/">9-1-1</a> (2018 to present)</li>
+<li><a href="%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%aa%e0%b8%b8%e0%b8%94%e0%b8%97%e0%b9%89%e0%b8%b2%e0%b8%a2-my-safe-zone/">รักสุดท้าย My Safe Zone</a> (2025)</li>
+<li><a href="%e0%b8%a3%e0%b8%b1%e0%b8%9a%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%ad%e0%b8%ad%e0%b8%81%e0%b9%81%e0%b8%9a%e0%b8%9a-love-design/">รับ(รัก)ออกแบบ Love design</a> (2025)</li>
+<li><a href="%e0%b8%a5%e0%b8%b1%e0%b8%a5%e0%b8%a5%e0%b9%8c%e0%b9%84%e0%b8%a1%e0%b9%88%e0%b8%8a%e0%b8%ad%e0%b8%9a%e0%b9%84%e0%b8%a7%e0%b8%99%e0%b9%8c-enemies-with-benefits/">ลัลล์ไม่ชอบไวน์ Enemies with benefits</a> (2026)</li>
+</ul>
+<h3 id="letter-a">A</h3>
+<ul class="shows">
+<li><a href="ackley-bridge/">Ackley Bridge</a> (2017 to 2022)</li>
+<li><a href="adventure-time-fionna-cake/">Adventure Time: Fionna &amp; Cake</a> (2023 to present)</li>
+<li><a href="agatha-raisin/">Agatha Raisin</a> (2014 to 2022)</li>
+<li><a href="the-air-%e0%b9%80%e0%b8%aa%e0%b8%99%e0%b9%88%e0%b8%ab%e0%b8%b2%e0%b8%a7%e0%b8%b2%e0%b9%82%e0%b8%a2/">The Air เสน่หาวาโย</a> (2026)</li>
+<li><a href="all-american/">All American</a> (2018 to 2026)</li>
+<li><a href="all-for-one/">All For One</a> (2016 to 2018)</li>
+<li><a href="all-my-children/">All My Children</a> (1970 to 2011)</li>
+<li><a href="all-rise/">All Rise</a> (2019 to 2023)</li>
+<li><a href="almost-family/">Almost Family</a> (2019 to 2020)</li>
+<li><a href="american-dad/">American Dad!</a> (2005 to present)</li>
+<li><a href="american-horror-stories/">American Horror Stories</a> (2021 to 2024)</li>
+<li><a href="american-horror-story/">American Horror Story</a> (2011 to present)</li>
+<li><a href="amphibia/">Amphibia</a> (2019 to 2022)</li>
+<li><a href="and-just-like-that/">And Just Like That…</a> (2021 to 2025)</li>
+<li><a href="anne/">ANNE+</a> (2018)</li>
+<li><a href="anyone-but-me/">Anyone But Me</a> (2008 to 2011)</li>
+<li><a href="armistead-maupins-tales-of-the-city/">Armistead Maupin’s Tales of the City</a> (2019)</li>
+<li><a href="as-five/">As Five</a> (2020 to 2024)</li>
+<li><a href="avocado-toast/">Avocado Toast</a> (2020)</li>
+</ul>
+<h3 id="letter-b">B</h3>
+<ul class="shows">
+<li><a href="the-baby-sitters-club/">The Baby-Sitters Club</a> (2020 to 2021)</li>
+<li><a href="bad-girls/">Bad Girls</a> (1999 to 2006)</li>
+<li><a href="banana/">Banana</a> (2015)</li>
+<li><a href="barbelle/">Barbelle</a> (2017 to 2019)</li>
+<li><a href="batwoman/">Batwoman</a> (2019 to 2022)</li>
+<li><a href="better-things/">Better Things</a> (2016 to 2022)</li>
+<li><a href="betty/">Betty</a> (2020 to 2021)</li>
+<li><a href="beverly-hills-90210/">Beverly Hills, 90210</a> (1990 to 2000)</li>
+<li><a href="beyond-paradise/">Beyond Paradise</a> (2023 to present)</li>
+<li><a href="bifl/">BIFL</a> (2019 to 2020)</li>
+<li><a href="big-mouth/">Big Mouth</a> (2017 to 2025)</li>
+<li><a href="the-bisexual/">The Bisexual</a> (2018)</li>
+<li><a href="black-lightning/">Black Lightning</a> (2018 to 2021)</li>
+<li><a href="black-mirror/">Black Mirror</a> (2011 to present)</li>
+<li><a href="black-ish/">Black-ish</a> (2014 to 2022)</li>
+<li><a href="the-blacklist/">The Blacklist</a> (2013 to 2023)</li>
+<li><a href="bliss/">Bliss</a> (2002 to 2004)</li>
+<li><a href="blue-bloods/">Blue Bloods</a> (2010 to 2024)</li>
+<li><a href="bobs-burgers/">Bob’s Burgers</a> (2011 to present)</li>
+<li><a href="bojack-horseman/">BoJack Horseman</a> (2014 to 2020)</li>
+<li><a href="the-bold-and-the-beautiful/">The Bold and The Beautiful</a> (1987 to present)</li>
+<li><a href="the-bold-type/">The Bold Type</a> (2017 to 2021)</li>
+<li><a href="bones/">Bones</a> (2005 to 2017)</li>
+<li><a href="the-boys/">The Boys</a> (2019 to 2026)</li>
+<li><a href="brilliant-minds/">Brilliant Minds</a> (2024 to 2026)</li>
+<li><a href="the-brokenwood-mysteries/">The Brokenwood Mysteries</a> (2014 to present)</li>
+<li><a href="brooklyn-nine-nine/">Brooklyn Nine-Nine</a> (2013 to 2021)</li>
+<li><a href="buffy-the-vampire-slayer/">Buffy The Vampire Slayer</a> (1997 to 2003)</li>
+</ul>
+<h3 id="letter-c">C</h3>
+<ul class="shows">
+<li><a href="call-the-midwife/">Call the Midwife</a> (2012 to present)</li>
+<li><a href="carmilla/">Carmilla</a> (2014 to 2016)</li>
+<li><a href="casual/">Casual</a> (2015 to 2018)</li>
+<li><a href="casualty/">Casualty</a> (1986 to present)</li>
+<li><a href="charmed-2018/">Charmed (2018)</a> (2018 to 2022)</li>
+<li><a href="chasing-life/">Chasing Life</a> (2014 to 2015)</li>
+<li><a href="the-chi/">The Chi</a> (2018 to 2026)</li>
+<li><a href="chica-busca-chica/">Chica Busca Chica</a> (2007 to 2009)</li>
+<li><a href="chicago-fire/">Chicago Fire</a> (2012 to present)</li>
+<li><a href="chicago-hope/">Chicago Hope</a> (1994 to 2000)</li>
+<li><a href="chicago-med/">Chicago Med</a> (2015 to present)</li>
+<li><a href="chucky/">Chucky</a> (2021 to 2024)</li>
+<li><a href="citrus/">Citrus</a> (2018)</li>
+<li><a href="clique/">Clique</a> (2017 to 2018)</li>
+<li><a href="club-friday-the-series/">Club Friday The Series</a> (2012 (end year not recorded))</li>
+<li><a href="cobra-kai/">Cobra Kai</a> (2018 to 2023)</li>
+<li><a href="code-black/">Code Black</a> (2015 to 2018)</li>
+<li><a href="control-z/">Control Z</a> (2020 to 2022)</li>
+<li><a href="coronation-street/">Coronation Street</a> (1960 to present)</li>
+<li><a href="coroner/">Coroner</a> (2019 to 2022)</li>
+<li><a href="craig-of-the-creek/">Craig of the Creek</a> (2018 to 2025)</li>
+<li><a href="crazy-bitches/">Crazy Bitches</a> (2019)</li>
+<li><a href="crazy-ex-girlfriend/">Crazy Ex-Girlfriend</a> (2015 to 2019)</li>
+<li><a href="criminal-minds/">Criminal Minds</a> (2005 to 2020)</li>
+<li><a href="cross-ange/">Cross Ange</a> (2014 to 2015)</li>
+<li><a href="csi/">CSI: Crime Scene Investigation</a> (2000 to 2016)</li>
+<li><a href="cucumber/">Cucumber</a> (2015)</li>
+<li><a href="curb-your-enthusiasm/">Curb Your Enthusiasm</a> (2000 to 2024)</li>
+</ul>
+<h3 id="letter-d">D</h3>
+<ul class="shows">
+<li><a href="dantes-cove/">Dante’s Cove</a> (2005 to 2007)</li>
+<li><a href="de-volta-aos-15/">De Volta aos 15</a> (2022 to 2024)</li>
+<li><a href="dead-end-paranormal-park/">Dead End: Paranormal Park</a> (2022)</li>
+<li><a href="dead-ringers/">Dead Ringers</a> (2023)</li>
+<li><a href="deadloch/">Deadloch</a> (2023 to 2026)</li>
+<li><a href="dear-white-people/">Dear White People</a> (2017 to 2021)</li>
+<li><a href="death-in-paradise/">Death in Paradise</a> (2011 to present)</li>
+<li><a href="degrassi-next-class/">Degrassi: Next Class</a> (2016 to 2017)</li>
+<li><a href="degrassi-tng/">Degrassi: The Next Generation</a> (2001 to 2015)</li>
+<li><a href="demain-nous-appartient/">Demain nous appartient</a> (2017 to present)</li>
+<li><a href="the-deuce/">The Deuce</a> (2017 to 2019)</li>
+<li><a href="dexter/">Dexter</a> (2006 to 2013)</li>
+<li><a href="diary-of-a-future-president/">Diary of a Future President</a> (2020 to 2021)</li>
+<li><a href="different-for-girls/">Different For Girls</a> (2017 to 2018)</li>
+<li><a href="doctor-who/">Doctor Who (2005)</a> (2005 to 2022)</li>
+<li><a href="doctors/">Doctors</a> (2000 to 2024)</li>
+<li><a href="doom-patrol/">Doom Patrol</a> (2019 to 2023)</li>
+<li><a href="doubt/">Doubt</a> (2017)</li>
+<li><a href="the-dragon-prince/">The Dragon Prince</a> (2018 to 2024)</li>
+</ul>
+<h3 id="letter-e">E</h3>
+<ul class="shows">
+<li><a href="the-earth-%e0%b8%a7%e0%b8%b4%e0%b8%a7%e0%b8%b2%e0%b8%ab%e0%b9%8c%e0%b8%9b%e0%b8%90%e0%b8%9e%e0%b8%b5/">The Earth วิวาห์ปฐพี</a> (2026)</li>
+<li><a href="east-los-high/">East Los High</a> (2013 to 2017)</li>
+<li><a href="eastenders/">EastEnders</a> (1985 to present)</li>
+<li><a href="elementary/">Elementary</a> (2012 to 2019)</li>
+<li><a href="elite/">Élite</a> (2018 to 2024)</li>
+<li><a href="ellen/">Ellen</a> (1994 to 1998)</li>
+<li><a href="elsbeth/">Elsbeth</a> (2024 to present)</li>
+<li><a href="emmerdale/">Emmerdale</a> (1972 to present)</li>
+<li><a href="empire/">Empire</a> (2015 to 2020)</li>
+<li><a href="the-equalizer/">The Equalizer</a> (2021 to 2025)</li>
+<li><a href="er/">ER</a> (1994 to 2009)</li>
+<li><a href="euphoria/">Euphoria</a> (2019 to 2026)</li>
+<li><a href="exes-and-ohs/">Exes and Ohs</a> (2007 to 2011)</li>
+<li><a href="the-expanse/">The Expanse</a> (2015 to 2022)</li>
+</ul>
+<h3 id="letter-f">F</h3>
+<ul class="shows">
+<li><a href="fair-city/">Fair City</a> (1989 to present)</li>
+<li><a href="faking-it/">Faking It</a> (2014 to 2016)</li>
+<li><a href="the-fall-of-the-house-of-usher/">The Fall of the House of Usher</a> (2023)</li>
+<li><a href="family-guy/">Family Guy</a> (1999 to present)</li>
+<li><a href="family-law-canada/">Family Law (Canada)</a> (2021 to 2026)</li>
+<li><a href="fantasy-island/">Fantasy Island</a> (2021 to 2023)</li>
+<li><a href="father-brown/">Father Brown</a> (2013 to present)</li>
+<li><a href="feel-good/">Feel Good</a> (2020 to 2021)</li>
+<li><a href="femininfeminin/">Féminin/Féminin</a> (2014 to 2018)</li>
+<li><a href="fire-country/">Fire Country</a> (2022 to present)</li>
+<li><a href="the-fire-%e0%b9%82%e0%b8%8b%e0%b9%88%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%ad%e0%b8%b1%e0%b8%84%e0%b8%99%e0%b8%b5/">The Fire โซ่รักอัคนี</a> (2026)</li>
+<li><a href="first-kill/">First Kill</a> (2022)</li>
+<li><a href="flack/">Flack</a> (2019 to 2020)</li>
+<li><a href="the-flash/">The Flash</a> (2014 to 2023)</li>
+<li><a href="flunk/">Flunk</a> (2018 to present)</li>
+<li><a href="for-all-mankind/">For All Mankind</a> (2019 to present)</li>
+<li><a href="the-fortnight/">The Fortnight</a> (2020 to present)</li>
+<li><a href="the-fosters/">The Fosters</a> (2013 to 2018)</li>
+<li><a href="friends/">Friends</a> (1994 to 2004)</li>
+<li><a href="from/">FROM</a> (2022 to present)</li>
+</ul>
+<h3 id="letter-g">G</h3>
+<ul class="shows">
+<li><a href="game-of-thrones/">Game of Thrones</a> (2011 to 2019)</li>
+<li><a href="gen-v/">Gen V</a> (2023 to 2025)</li>
+<li><a href="general-hospital/">General Hospital</a> (1963 to present)</li>
+<li><a href="gentleman-jack/">Gentleman Jack</a> (2019 to 2022)</li>
+<li><a href="ghosts-us/">Ghosts (US)</a> (2021 to present)</li>
+<li><a href="ginny-georgia/">Ginny &amp; Georgia</a> (2021 to present)</li>
+<li><a href="girl-rules-%e0%b8%81%e0%b8%8e%e0%b8%ab%e0%b8%a5%e0%b8%b1%e0%b8%81-%e0%b8%ab%e0%b9%89%e0%b8%b2%e0%b8%a1%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b9%80%e0%b8%98%e0%b8%ad/">Girl Rules กฎหลัก…ห้ามรักเธอ</a> (2026)</li>
+<li><a href="girl-girl-scene/">Girl/Girl Scene</a> (2010 to 2013)</li>
+<li><a href="the-girlfriend-experience/">The Girlfriend Experience</a> (2016 to 2021)</li>
+<li><a href="girlfriends/">Girlfriends</a> (2000 to 2008)</li>
+<li><a href="glee/">Glee</a> (2009 to 2015)</li>
+<li><a href="the-good-doctor/">The Good Doctor</a> (2017 to 2024)</li>
+<li><a href="the-good-fight/">The Good Fight</a> (2017 to 2022)</li>
+<li><a href="good-omens/">Good Omens</a> (2019 to 2026)</li>
+<li><a href="good-trouble/">Good Trouble</a> (2019 to 2024)</li>
+<li><a href="the-good-wife/">The Good Wife</a> (2009 to 2016)</li>
+<li><a href="grace-and-frankie/">Grace and Frankie</a> (2015 to 2020)</li>
+<li><a href="granchester/">Granchester</a> (2014 to 2026)</li>
+<li><a href="the-great-north/">The Great North</a> (2021 to 2025)</li>
+<li><a href="greys-anatomy/">Grey’s Anatomy</a> (2005 to present)</li>
+<li><a href="grown-ish/">Grown-ish</a> (2018 to 2023)</li>
+<li><a href="gute-zeiten-schlechte-zeiten/">Gute Zeiten, schlechte Zeiten</a> (1992 to present)</li>
+</ul>
+<h3 id="letter-h">H</h3>
+<ul class="shows">
+<li><a href="hacks/">Hacks</a> (2021 to 2026)</li>
+<li><a href="the-handmaids-tale/">The Handmaid’s Tale</a> (2017 to 2025)</li>
+<li><a href="harlem/">Harlem</a> (2021 to 2025)</li>
+<li><a href="harley-quinn/">Harley Quinn</a> (2019 to present)</li>
+<li><a href="harlots/">Harlots</a> (2017 to 2019)</li>
+<li><a href="harry-wild/">Harry Wild</a> (2022 to present)</li>
+<li><a href="heartstopper/">Heartstopper</a> (2022 to 2026)</li>
+<li><a href="helluva-boss/">Helluva Boss</a> (2019 to present)</li>
+<li><a href="high-maintenance/">High Maintenance</a> (2016 to 2020)</li>
+<li><a href="high-school-musical-the-musical-the-series/">High School Musical: The Musical: The Series</a> (2019 to 2023)</li>
+<li><a href="hightown/">Hightown</a> (2020 to 2024)</li>
+<li><a href="hinter-gittern/">Hinter Gittern</a> (1997 to 2007)</li>
+<li><a href="holby-city/">Holby City</a> (1999 to 2022)</li>
+<li><a href="hollyoaks/">Hollyoaks</a> (1995 to present)</li>
+<li><a href="home-and-away/">Home and Away</a> (1988 to present)</li>
+<li><a href="home-economics/">Home Economics</a> (2021 to 2023)</li>
+<li><a href="hourou-musuko/">Hourou Musuko</a> (2011)</li>
+<li><a href="house-md/">House M.D.</a> (2004 to 2012)</li>
+<li><a href="how-to-get-away-with-murder/">How to Get Away with Murder</a> (2014 to 2020)</li>
+<li><a href="hpi/">HPI: Haut Potentiel Intellectuel</a> (2021 to 2025)</li>
+<li><a href="human-resources/">Human Resources</a> (2022 to 2023)</li>
+</ul>
+<h3 id="letter-i">I</h3>
+<ul class="shows">
+<li><a href="icarly/">iCarly</a> (2021 to 2023)</li>
+<li><a href="ici-tout-commence/">Ici tout Commence</a> (2020 to present)</li>
+<li><a href="ikki-tousen/">Ikki Tousen</a> (2003 to 2014)</li>
+<li><a href="in-the-dark/">In the Dark</a> (2019 to 2022)</li>
+<li><a href="indebted/">Indebted</a> (2020)</li>
+</ul>
+<h3 id="letter-j">J</h3>
+<ul class="shows">
+<li><a href="jane-the-virgin/">Jane the Virgin</a> (2014 to 2019)</li>
+</ul>
+<h3 id="letter-k">K</h3>
+<ul class="shows">
+<li><a href="killing-eve/">Killing Eve</a> (2018 to 2022)</li>
+<li><a href="koihime-muso/">Koihime Musō</a> (2008 to 2010)</li>
+</ul>
+<h3 id="letter-l">L</h3>
+<ul class="shows">
+<li><a href="the-l-word/">The L Word</a> (2004 to 2009)</li>
+<li><a href="the-l-word-generation-q/">The L Word: Generation Q</a> (2019 to 2023)</li>
+<li><a href="las-finest/">L.A.’s Finest</a> (2019 to 2020)</li>
+<li><a href="la-casa-de-las-flores/">La Casa de las Flores</a> (2018 to 2020)</li>
+<li><a href="the-last-of-us/">The Last of Us</a> (2023 to present)</li>
+<li><a href="law-order/">Law &amp; Order</a> (1990 to 2010)</li>
+<li><a href="law-order-criminal-intent/">Law &amp; Order: Criminal Intent</a> (2001 to 2011)</li>
+<li><a href="law-order-organized-crime/">Law &amp; Order: Organized Crime</a> (2021 to 2025)</li>
+<li><a href="law-order-special-victims-unit/">Law &amp; Order: Special Victims Unit</a> (1999 to present)</li>
+<li><a href="a-league-of-their-own/">A League of Their Own</a> (2022)</li>
+<li><a href="legacies/">Legacies</a> (2018 to 2022)</li>
+<li><a href="the-legend-of-vox-machina/">The Legend of Vox Machina</a> (2022 to present)</li>
+<li><a href="legends-of-tomorrow/">Legends of Tomorrow</a> (2016 to 2022)</li>
+<li><a href="les-petits-meurtres-dagatha-christie/">Les petits meurtres d’Agatha Christie</a> (2009 to 2024)</li>
+<li><a href="leverage-redemption/">Leverage: Redemption</a> (2021 to 2025)</li>
+<li><a href="lindenstrase/">Lindenstraße</a> (1985 to 2020)</li>
+<li><a href="lip-service/">Lip Service</a> (2010 to 2012)</li>
+<li><a href="lipstick-the-series/">Lipstick: The Series</a> (2015 to 2016)</li>
+<li><a href="lost-girl/">Lost Girl</a> (2010 to 2016)</li>
+<li><a href="the-loud-house/">The Loud House</a> (2016 to present)</li>
+<li><a href="lovecraft-country/">Lovecraft Country</a> (2020 to 2021)</li>
+<li><a href="%e0%b8%9b%e0%b8%b4%e0%b9%88%e0%b8%99%e0%b8%a0%e0%b8%b1%e0%b8%81%e0%b8%94%e0%b8%b4%e0%b9%8c-the-loyal-pin/">The Loyal Pin ปิ่นภักดิ์</a> (2024)</li>
+</ul>
+<h3 id="letter-m">M</h3>
+<ul class="shows">
+<li><a href="madam-secretary/">Madam Secretary</a> (2014 to 2019)</li>
+<li><a href="madre-solo-hay-dos/">Madre Solo Hay Dos</a> (2021 to 2022)</li>
+<li><a href="the-magicians/">The Magicians</a> (2015 to 2020)</li>
+<li><a href="malhacao/">Malhação</a> (1995 to 2020)</li>
+<li><a href="manifest/">Manifest</a> (2018 to 2023)</li>
+<li><a href="the-mentalist/">The Mentalist</a> (2008 to 2015)</li>
+<li><a href="midsomer-murders/">Midsomer Murders</a> (1998 to present)</li>
+<li><a href="the-mighty-nein/">The Mighty Nein</a> (2025 to present)</li>
+<li><a href="a-million-little-things/">A Million Little Things</a> (2018 to 2023)</li>
+<li><a href="the-mindy-project/">The Mindy Project</a> (2012 to 2017)</li>
+<li><a href="miraculous-tales-of-ladybug-cat-noir/">Miraculous: Tales of Ladybug &amp; Cat Noir</a> (2015 to present)</li>
+<li><a href="misfits/">Misfits</a> (2009 to 2013)</li>
+<li><a href="miss-fishers-murder-mysteries/">Miss Fisher’s Murder Mysteries</a> (2012 to 2015)</li>
+<li><a href="mistresses-us/">Mistresses (US)</a> (2013 to 2016)</li>
+<li><a href="moon-girl-devil-dinosaur/">Moon Girl &amp; Devil Dinosaur</a> (2023 to 2025)</li>
+<li><a href="the-morning-show/">The Morning Show</a> (2019 to present)</li>
+<li><a href="motherland-fort-salem/">Motherland: Fort Salem</a> (2020 to 2022)</li>
+<li><a href="mrs-america/">Mrs. America</a> (2020)</li>
+<li><a href="murdoch-mysteries/">Murdoch Mysteries</a> (2008 to present)</li>
+<li><a href="my-adventures-with-superman/">My Adventures with Superman</a> (2023 to present)</li>
+</ul>
+<h3 id="letter-n">N</h3>
+<ul class="shows">
+<li><a href="nancy-drew/">Nancy Drew</a> (2019 to 2023)</li>
+<li><a href="ncis/">NCIS</a> (2003 to present)</li>
+<li><a href="ncis-hawaii/">NCIS: Hawai’i</a> (2021 to 2024)</li>
+<li><a href="neighbours/">Neighbours</a> (1985 to 2025)</li>
+<li><a href="never-have-i-ever/">Never Have I Ever</a> (2020 to 2023)</li>
+<li><a href="new-amsterdam/">New Amsterdam</a> (2018 to 2023)</li>
+<li><a href="new-girl/">New Girl</a> (2011 to 2018)</li>
+<li><a href="nip-tuck/">Nip/Tuck</a> (2003 to 2010)</li>
+<li><a href="number-96/">Number 96</a> (1972 to 1977)</li>
+<li><a href="nurses/">Nurses</a> (2020 to 2021)</li>
+<li><a href="nypd-blue/">NYPD Blue</a> (1993 to 2005)</li>
+</ul>
+<h3 id="letter-o">O</h3>
+<ul class="shows">
+<li><a href="once-upon-a-time/">Once Upon a Time</a> (2011 to 2018)</li>
+<li><a href="one-day-at-a-time/">One Day at a Time</a> (2017 to 2020)</li>
+<li><a href="one-mississippi/">One Mississippi</a> (2015 to 2017)</li>
+<li><a href="one-piece/">One Piece</a> (1999 to present)</li>
+<li><a href="only-murders-in-the-building/">Only Murders in the Building</a> (2021 to present)</li>
+<li><a href="only-you/">Only You เพียงเธอ</a> (2025)</li>
+<li><a href="orange-is-the-new-black/">Orange is the New Black</a> (2013 to 2019)</li>
+<li><a href="orphan-black/">Orphan Black</a> (2013 to 2017)</li>
+<li><a href="orphan-black-echoes/">Orphan Black: Echoes</a> (2023)</li>
+<li><a href="our-flag-means-death/">Our Flag Means Death</a> (2022 to 2023)</li>
+<li><a href="out-of-practice/">Out of Practice</a> (2005 to 2006)</li>
+<li><a href="out-with-dad/">Out with Dad</a> (2010 to 2017)</li>
+<li><a href="the-owl-house/">The Owl House</a> (2020 to 2023)</li>
+</ul>
+<h3 id="letter-p">P</h3>
+<ul class="shows">
+<li><a href="paper-dolls/">Paper Dolls</a> (2023 to 2024)</li>
+<li><a href="paradise-falls/">Paradise Falls</a> (2001 to 2008)</li>
+<li><a href="the-pitt/">The Pitt</a> (2025 to present)</li>
+<li><a href="a-place-to-call-home/">A Place to Call Home</a> (2013 to 2018)</li>
+<li><a href="plus-belle-la-vie/">Plus Belle La Vie</a> (2004 to 2022)</li>
+<li><a href="pluto-%e0%b8%99%e0%b8%b4%e0%b8%97%e0%b8%b2%e0%b8%99-%e0%b8%94%e0%b8%a7%e0%b8%87%e0%b8%94%e0%b8%b2%e0%b8%a7-%e0%b8%84%e0%b8%a7%e0%b8%b2%e0%b8%a1%e0%b8%a3%e0%b8%b1%e0%b8%81/">Pluto นิทาน ดวงดาว ความรัก</a> (2024 to 2025)</li>
+<li><a href="the-politician/">The Politician</a> (2019 to 2020)</li>
+<li><a href="portlandia/">Portlandia</a> (2011 to 2018)</li>
+<li><a href="pose/">Pose</a> (2018 to 2021)</li>
+<li><a href="the-power/">The Power</a> (2023)</li>
+<li><a href="pretty-little-liars/">Pretty Little Liars</a> (2010 to 2017)</li>
+<li><a href="pretty-little-liars-original-sin/">Pretty Little Liars: Original Sin</a> (2022 to 2024)</li>
+<li><a href="prisoner-cell-block-h/">Prisoner: Cell Block H</a> (1979 to 1986)</li>
+<li><a href="private-practice/">Private Practice</a> (2007 to 2013)</li>
+</ul>
+<h3 id="letter-q">Q</h3>
+<ul class="shows">
+<li><a href="q-force/">Q-Force</a> (2021)</li>
+<li><a href="queen-sugar/">Queen Sugar</a> (2016 to 2022)</li>
+<li><a href="queer-folk-us/">Queer as Folk (US)</a> (2000 to 2005)</li>
+</ul>
+<h3 id="letter-r">R</h3>
+<ul class="shows">
+<li><a href="red/">RED</a> (2014 to 2020)</li>
+<li><a href="rent-controlled/">Rent Controlled</a> (2014)</li>
+<li><a href="revolutionary-girl-utena/">Revolutionary Girl Utena</a> (1997)</li>
+<li><a href="riverdale/">Riverdale</a> (2017 to 2023)</li>
+<li><a href="the-rookie/">The Rookie</a> (2018 to present)</li>
+<li><a href="rookie-blue/">Rookie Blue</a> (2010 to 2015)</li>
+<li><a href="the-rookie-feds/">The Rookie: Feds</a> (2022 to 2023)</li>
+<li><a href="roseanne/">Roseanne</a> (1988 to 2018)</li>
+<li><a href="roswell-new-mexico/">Roswell, New Mexico</a> (2019 to 2022)</li>
+<li><a href="rwby/">RWBY</a> (2013 to 2023)</li>
+</ul>
+<h3 id="letter-s">S</h3>
+<ul class="shows">
+<li><a href="sakura-trick/">Sakura Trick</a> (2014)</li>
+<li><a href="salatut-elamat/">Salatut elämät</a> (1999 to present)</li>
+<li><a href="the-sandman/">The Sandman</a> (2022 to 2025)</li>
+<li><a href="saving-hope/">Saving Hope</a> (2012 to 2017)</li>
+<li><a href="scandal/">Scandal</a> (2012 to 2018)</li>
+<li><a href="schitts-creek/">Schitt’s Creek</a> (2015 to 2020)</li>
+<li><a href="the-secret-of-us/">The Secret of Us จซ่อนรัก</a> (2024)</li>
+<li><a href="sense8/">Sense8</a> (2015 to 2018)</li>
+<li><a href="servir-y-proteger/">Servir y Proteger</a> (2017 to 2023)</li>
+<li><a href="sex-education/">Sex Education</a> (2019 to 2023)</li>
+<li><a href="the-sex-lives-of-college-girls/">The Sex Lives of College Girls</a> (2021 to 2025)</li>
+<li><a href="shadow-and-bone/">Shadow and Bone</a> (2021 to 2023)</li>
+<li><a href="shameless-us/">Shameless (US)</a> (2011 to 2021)</li>
+<li><a href="she-ra-and-the-princesses-of-power/">She-Ra and the Princesses of Power</a> (2018 to 2020)</li>
+<li><a href="shortland-street/">Shortland Street</a> (1992 to present)</li>
+<li><a href="shrill/">Shrill</a> (2019 to 2021)</li>
+<li><a href="the-simpsons/">The Simpsons</a> (1989 to present)</li>
+<li><a href="single-drunk-female/">Single Drunk Female</a> (2022 to 2023)</li>
+<li><a href="siren/">Siren</a> (2018 to 2020)</li>
+<li><a href="skins/">Skins</a> (2007 to 2013)</li>
+<li><a href="slasher/">Slasher</a> (2016 to 2023)</li>
+<li><a href="slo-pitch/">Slo Pitch</a> (2020 to 2022)</li>
+<li><a href="slo-pitch-crave/">Slo Pitch (Crave)</a> (2026 to present)</li>
+<li><a href="snowpiercer/">Snowpiercer</a> (2020 to 2024)</li>
+<li><a href="so-help-me-todd/">So Help Me Todd</a> (2022 to 2024)</li>
+<li><a href="south-of-nowhere/">South Of Nowhere</a> (2005 to 2008)</li>
+<li><a href="star/">Star</a> (2016 to 2019)</li>
+<li><a href="star-trek-deep-space-nine/">Star Trek: Deep Space Nine</a> (1993 to 1999)</li>
+<li><a href="star-trek-discovery/">Star Trek: Discovery</a> (2017 to 2024)</li>
+<li><a href="starting-from-now/">Starting From … Now!</a> (2014 to 2016)</li>
+<li><a href="station-19/">Station 19</a> (2018 to 2024)</li>
+<li><a href="steven-universe/">Steven Universe</a> (2013 to 2019)</li>
+<li><a href="strangers/">Strangers</a> (2017 to 2018)</li>
+<li><a href="supergirl/">Supergirl</a> (2015 to 2021)</li>
+<li><a href="supernatural/">Supernatural</a> (2005 to 2020)</li>
+<li><a href="survivors-remorse/">Survivor’s Remorse</a> (2014 to 2017)</li>
+<li><a href="swat/">SWAT</a> (2017 to 2025)</li>
+<li><a href="sweet-blue-flowers/">Sweet Blue Flowers</a> (2009)</li>
+</ul>
+<h3 id="letter-t">T</h3>
+<ul class="shows">
+<li><a href="tachibanakan-to-lie-angle/">Tachibanakan To Lie Angle</a> (2018)</li>
+<li><a href="take-my-wife/">Take My Wife</a> (2016 to 2018)</li>
+<li><a href="tatort/">Tatort</a> (1970 to present)</li>
+<li><a href="ted-lasso/">Ted Lasso</a> (2020 to present)</li>
+<li><a href="terra-e-paixao/">Terra e Paixão</a> (2023 to 2024)</li>
+<li><a href="til-lease-do-us-part/">Til Lease Do Us Part</a> (2014 to 2015)</li>
+<li><a href="torchwood/">Torchwood</a> (2006 to 2011)</li>
+<li><a href="transparent/">Transparent</a> (2014 to 2019)</li>
+<li><a href="transplant/">Transplant</a> (2020 to 2024)</li>
+<li><a href="true-blood/">True Blood</a> (2008 to 2014)</li>
+<li><a href="tuca-bertie/">Tuca &amp; Bertie</a> (2019 to 2022)</li>
+<li><a href="twenties/">Twenties</a> (2020 to 2021)</li>
+<li><a href="two-and-a-half-men/">Two and a Half Men</a> (2003 to 2015)</li>
+</ul>
+<h3 id="letter-u">U</h3>
+<ul class="shows">
+<li><a href="undressed/">Undressed</a> (1999 to 2002)</li>
+<li><a href="unforgotten/">Unforgotten</a> (2015 to present)</li>
+</ul>
+<h3 id="letter-v">V</h3>
+<ul class="shows">
+<li><a href="valeria/">Valeria</a> (2020 to 2023)</li>
+<li><a href="the-vampire-diaries/">The Vampire Diaries</a> (2009 to 2017)</li>
+<li><a href="van-der-valk/">Van der Valk</a> (2020 to 2021)</li>
+<li><a href="van-helsing/">Van Helsing</a> (2016 to 2021)</li>
+<li><a href="velma/">Velma</a> (2023 to 2024)</li>
+<li><a href="veneno/">Veneno</a> (2020)</li>
+<li><a href="verbotene-liebe/">Verbotene Liebe</a> (1995 to 2015)</li>
+<li><a href="veronica-mars/">Veronica Mars</a> (2004 to 2019)</li>
+<li><a href="vida/">Vida</a> (2018 to 2020)</li>
+<li><a href="vis-a-vis/">Vis a Vis</a> (2015 to 2019)</li>
+</ul>
+<h3 id="letter-w">W</h3>
+<ul class="shows">
+<li><a href="the-walking-dead/">The Walking Dead</a> (2010 to 2022)</li>
+<li><a href="warrior-nun/">Warrior Nun</a> (2020 to 2022)</li>
+<li><a href="the-water-%e0%b8%99%e0%b8%97%e0%b8%b5%e0%b8%a3%e0%b9%89%e0%b8%ad%e0%b8%a2%e0%b9%80%e0%b8%a5%e0%b9%88%e0%b8%ab%e0%b9%8c/">The Water นทีร้อยเล่ห์</a> (2026)</li>
+<li><a href="waterloo-road/">Waterloo Road</a> (2006 to 2015)</li>
+<li><a href="we-are-who-we-are/">We Are Who We Are</a> (2020)</li>
+<li><a href="wentworth/">Wentworth</a> (2013 to 2021)</li>
+<li><a href="westworld/">Westworld</a> (2016 to 2022)</li>
+<li><a href="why-women-kill/">Why Women Kill</a> (2019 to 2021)</li>
+<li><a href="will-grace/">Will &amp; Grace</a> (1998 to 2020)</li>
+<li><a href="will-trent/">Will Trent</a> (2023 to present)</li>
+<li><a href="the-wire/">The Wire</a> (2002 to 2008)</li>
+<li><a href="without-a-trace/">Without a Trace</a> (2002 to 2009)</li>
+<li><a href="workin-moms/">Workin’ Moms</a> (2017 to 2023)</li>
+<li><a href="wynonna-earp/">Wynonna Earp</a> (2016 to 2021)</li>
+</ul>
+<h3 id="letter-y">Y</h3>
+<ul class="shows">
+<li><a href="yellowjackets/">Yellowjackets</a> (2021 to present)</li>
+<li><a href="younger/">Younger</a> (2015 to 2021)</li>
+<li><a href="yuruyuri/">YuruYuri</a> (2011 to 2015)</li>
+</ul>
+
+<div class="get-app"><p><strong>Get the iPhone app.</strong> Favorite the shows you follow and see each one's next episode at a glance, add the Up Next widget to your Home Screen, or turn on new-episode reminders. It works offline. No account, no ads, no subscription.</p><p class="app-store-cta"><a class="app-store-badge" href="https://apps.apple.com/app/id6818637465?pt=129452704&amp;ct=shows&amp;mt=8"><img src="https://queerframe.app/app-store-badge.svg" width="120" height="40" alt="Download on the App Store"></a> <span>Queer Frame for iPhone. $4.99 in the US; the App Store shows the local price where the app is sold.</span></p></div>
+
+
+</main>
+<footer>
+
+<h2>The data</h2>
+<p>This dataset is published under the Creative Commons Attribution-ShareAlike 4.0 International license. Show and character data: LezWatch.TV. Episode and schedule data: TVmaze (CC BY-SA 4.0). Other titles and some season counts: Wikidata (CC0). If you redistribute this file, keep this notice and these credits.</p>
+<p>This data is published under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>. If you reuse it, keep these credits. It was last built from the sources on 2026-11-28.</p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://lezwatchtv.com/">LezWatch.TV</a>: Show and character data from LezWatch.TV (https://lezwatchtv.com), the volunteer-run database of queer female, non-binary and transgender characters on TV. Used with thanks under its terms of use; LezWatch.TV does not endorse this app. License: <a href="https://lezwatchtv.com/tos/">LezWatch.TV Terms of Use (free reuse, no formal open license)</a>. <a href="https://lezwatchtv.com/tos/">Terms</a>, read 2026-09-13.</li>
+<li><a href="https://www.tvmaze.com/">TVmaze</a>: Episode and schedule data from TVmaze (https://www.tvmaze.com), licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). Reformatted for this app; TVmaze provides the data as-is without warranty and does not endorse this app. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. <a href="https://www.tvmaze.com/api">Terms</a>, read 2026-09-13.</li>
+</ul>
+<p>LezWatch.TV and TVmaze do not endorse Queer Frame. They are not responsible for the accuracy of this page.</p>
+<p class="small">This website has no analytics and no cookies, runs no code in your browser, and loads nothing from any other site. <a href="https://queerframe.app/privacy.html">Privacy policy</a> &middot; <a href="https://queerframe.app/terms.html">Terms of use</a> &middot; <a href="https://queerframe.app/support.html">Support</a> &middot; <a href="https://queerframe.app/data/">Data files</a> &middot; <a href="https://queerframe.app/findings/finales/">Findings</a> &middot; <a href="https://queerframe.app/press/">Press</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+"# Queer Frame, when queer characters die in a show, as of 2026-11-06. Adapted from LezWatch.TV (https://lezwatchtv.com) and TVmaze (https://www.tvmaze.com, CC BY-SA 4.0). License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)."
+measure,group,deaths_placed,deaths_in_position,baseline_share
+season_finale,all,431,81,0.0797
+season_finale,era:2010 or later,314,60,0.0825
+season_finale,era:before 2010,117,21,0.0725
+season_finale,regular-era:2010 or later,102,39,0.081
+season_finale,regular-era:before 2010,40,11,0.0755
+season_finale,regular-release:broadcast,123,44,0.0779
+season_finale,regular-release:streaming,19,6,0.0896
+season_finale,release:broadcast,365,69,0.075
+season_finale,release:streaming,66,12,0.1062
+season_finale,role:guest,165,11,0.0832
+season_finale,role:recurring,124,20,0.0755
+season_finale,role:regular,142,50,0.0794
+season_1,all,431,117,0.2756
+season_2,all,431,75,0.1761
+season_3+,all,431,239,0.5483
+series_finale,ended_shows,329,32,0.0317

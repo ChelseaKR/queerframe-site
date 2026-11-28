@@ -1,0 +1,601 @@
+{
+ "pages": {
+  "/": {
+   "changed": "2026-11-18",
+   "fingerprint": "7258dfd78ad4ffa7a3529d47eb976beabbaea215239a0f6f322ad48f08faf6f2"
+  },
+  "/airing/": {
+   "changed": "2026-11-28",
+   "fingerprint": "bb6a85d1617d8e32537920f24eb58ba04a4bdae7c7f15f3cb6f6d8b7563bc9b5"
+  },
+  "/findings/finales/": {
+   "changed": "2026-11-18",
+   "fingerprint": "2ff16b642a38fb5f2c32f288dba27acfeefd763d5e03abb9277666e5fd8b6f0f"
+  },
+  "/press/": {
+   "changed": "2026-11-18",
+   "fingerprint": "5387bfad2dc4cf8ff28e2d30cde16e6f63184e29a139bffc12ce287e8f3808d1"
+  },
+  "/shows/": {
+   "changed": "2026-11-22",
+   "fingerprint": "f5562245442e360ce7d4eae44efe375b72f98f1a6ae3e8ae04433aedcc89390d"
+  },
+  "/shows/13-reasons-why/": {
+   "changed": "2026-11-18",
+   "fingerprint": "a2bb0964354de2f2778e049e56fe575031acac5b03362db8a2ecaab0772419aa"
+  },
+  "/shows/3/": {
+   "changed": "2026-11-18",
+   "fingerprint": "c38dc362b65d5f287779fc85060965bc69c631b5192aef60030d8d174de01eb2"
+  },
+  "/shows/9-1-1/": {
+   "changed": "2026-11-20",
+   "fingerprint": "7f61bcd29d46febe23fbf10ef80cf1b3ac89301207755ec229e67751da4cb67c"
+  },
+  "/shows/ackley-bridge/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b098f3d528db5d37e351b6e6a03927d825743386b902ff0699a7b901d2dd5b0b"
+  },
+  "/shows/adventure-time-fionna-cake/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4f4fafef60c5512de580bac8f80155c2524e0cc12cc5aaaac460c973bb2570d6"
+  },
+  "/shows/all-american/": {
+   "changed": "2026-11-22",
+   "fingerprint": "3d6479dc9a62a8f81ab9963301e3854eb641690e3fc8baeca897e62e64d47562"
+  },
+  "/shows/american-horror-story/": {
+   "changed": "2026-11-18",
+   "fingerprint": "9a451bd8d6b0be66d8a4a431c6c05c8b3e93dc716ed4bdf0d1860610e6c6df3b"
+  },
+  "/shows/amphibia/": {
+   "changed": "2026-11-18",
+   "fingerprint": "aa30f5fc5a8f003f0160e94e92dca8c024e21dda1b7966eda2d2d215539d6581"
+  },
+  "/shows/as-five/": {
+   "changed": "2026-11-18",
+   "fingerprint": "c2e1f9b3211707b20d419b4d604bdeb2b2bfce3b49f067a6745a70faedb0dea9"
+  },
+  "/shows/batwoman/": {
+   "changed": "2026-11-18",
+   "fingerprint": "c15476666a1f5a9a55f2468e9bd8f881a268582850e535e95cff7e857be3ba11"
+  },
+  "/shows/big-mouth/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6f85aa3cd48f8c30b5bec843ea3d17345179af9af7dca90184f9845f9fa796ce"
+  },
+  "/shows/black-mirror/": {
+   "changed": "2026-11-18",
+   "fingerprint": "3994cb70506007e9b5cee80d975040fa781addf72cadcd234550121c19440ca6"
+  },
+  "/shows/bojack-horseman/": {
+   "changed": "2026-11-18",
+   "fingerprint": "9d65e30308077c43eccdf0e0a58378a0ef00663b90a5b2c4a97d7b07d6779736"
+  },
+  "/shows/bones/": {
+   "changed": "2026-11-18",
+   "fingerprint": "412e9d92f0efa3915566156c1d16f83f34a0f5d2a70a44a6f50f559f1622b753"
+  },
+  "/shows/buffy-the-vampire-slayer/": {
+   "changed": "2026-11-18",
+   "fingerprint": "a0f7bdc3ce861102a11b2317b2abe7c1b2da7d8fdca78860e6980e9ed2d47363"
+  },
+  "/shows/call-the-midwife/": {
+   "changed": "2026-11-18",
+   "fingerprint": "07bb0d538c4f69bc8bdf7f2d5612bb908e0cdb1fab53485107cdcb95cffc5054"
+  },
+  "/shows/carmilla/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4fb3139eb26843a970723b8dda28e3a80ea0052cbbbf73f51e861f01538ca06d"
+  },
+  "/shows/charmed-2018/": {
+   "changed": "2026-11-18",
+   "fingerprint": "1e93921f26bd3a476e00dbe0466d10af2833eadd3a09430f7f342d3aad22213f"
+  },
+  "/shows/chasing-life/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b97928778f2ad144503e619b1ad5403796a0483c772d96a430d01cb8773ac511"
+  },
+  "/shows/chicago-med/": {
+   "changed": "2026-11-26",
+   "fingerprint": "afd6b03f91f68996254567194d6a607a50efbd65c87282970ae255f61508032c"
+  },
+  "/shows/chucky/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ae18efedd4d2755458be4fed1460c0bd6fa681cf1707e162f4daad0fea1c4f78"
+  },
+  "/shows/cobra-kai/": {
+   "changed": "2026-11-18",
+   "fingerprint": "27906369ce9d21c3ceb32add7558068591ace3fe2860b2ad202b1f475ec672b5"
+  },
+  "/shows/code-black/": {
+   "changed": "2026-11-18",
+   "fingerprint": "9229f5e9bc3d6ce9fa1e954d2277bd4e9f197921c8b46db4e9ca035d57532fd9"
+  },
+  "/shows/control-z/": {
+   "changed": "2026-11-18",
+   "fingerprint": "21c407ffbdb8842bef700db646745557485fdbb36e0752eeda6862066d65708d"
+  },
+  "/shows/coronation-street/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6ddfca2865ad2fd5094a768a93cf7894ba2c0f5b3b61e19b3d1cfc4240de0299"
+  },
+  "/shows/coroner/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b70b210903a4a10c62b3230c343e49fd155c141eed0d761a0f3962cdef2e7dc7"
+  },
+  "/shows/craig-of-the-creek/": {
+   "changed": "2026-11-22",
+   "fingerprint": "55e5bfdb7dc96a89daa0f40623f2669776f4b08cbaca672a3e5207037d5d12af"
+  },
+  "/shows/deadloch/": {
+   "changed": "2026-11-18",
+   "fingerprint": "2359492fa4198c312dd2725c730c71ab8e6a078da568b2d11657faebba6e8dbd"
+  },
+  "/shows/degrassi-tng/": {
+   "changed": "2026-11-18",
+   "fingerprint": "84d33eddb289fea7d9937c535a590d9e2cc3f0bceb15a520e28cfe89ec53f27b"
+  },
+  "/shows/doctor-who/": {
+   "changed": "2026-11-18",
+   "fingerprint": "9885a2c332443aca3c0156dfdd0c989b9db9d904c7dd219c3f32e9799299bfea"
+  },
+  "/shows/doom-patrol/": {
+   "changed": "2026-11-18",
+   "fingerprint": "cb5548e6fd2adf1145d583eb7d9ace5fdd9e4d54af216178bdcdfac4ae904d75"
+  },
+  "/shows/elite/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b816d342b68dbb3b3c45196236be02fb1d912eaff1c8c17c534ccc4bf939d825"
+  },
+  "/shows/elsbeth/": {
+   "changed": "2026-11-20",
+   "fingerprint": "c9f7416bbdb06547a57230d41ef1d906655b6036de845918de191dfc857e057c"
+  },
+  "/shows/emmerdale/": {
+   "changed": "2026-11-18",
+   "fingerprint": "149f478db3e5a768b91a1dd930426e1e49340e456a63afc91fcd3426516cde76"
+  },
+  "/shows/er/": {
+   "changed": "2026-11-18",
+   "fingerprint": "82bfa2a3cecabf9693efd94734f250c488986fd7c2693ec0ea39f99eb16a69d8"
+  },
+  "/shows/euphoria/": {
+   "changed": "2026-11-18",
+   "fingerprint": "02951271ffd2e4de08df819b5f17e42b6c263e180f5e6259e5836262bca01987"
+  },
+  "/shows/faking-it/": {
+   "changed": "2026-11-18",
+   "fingerprint": "8595730822a3c8a941d2167886494050da4c83f26d89ea7b08154177ab7be822"
+  },
+  "/shows/father-brown/": {
+   "changed": "2026-11-18",
+   "fingerprint": "37387437b5c51df0511b3fc905a4ba099413364c775310d95123a4e68b8fe4b9"
+  },
+  "/shows/feel-good/": {
+   "changed": "2026-11-18",
+   "fingerprint": "a4f576fcae6107707fd5a14ae40d956591dd5048aedd777f9dc251372419e411"
+  },
+  "/shows/first-kill/": {
+   "changed": "2026-11-18",
+   "fingerprint": "7d1f6e77ad550cb1885fc407ec6f15b3cd55df39bf803440d2c18458a07044f5"
+  },
+  "/shows/flack/": {
+   "changed": "2026-11-18",
+   "fingerprint": "159e8e3b4bcdb2209da615e8f8dbae89b454804436f0e830a0841c17d32b5c25"
+  },
+  "/shows/for-all-mankind/": {
+   "changed": "2026-11-18",
+   "fingerprint": "7eefc591819a7eff09e7dc47b38dcfccf0fb15940e6e30aa41a2fefa8a4f3f5f"
+  },
+  "/shows/from/": {
+   "changed": "2026-11-18",
+   "fingerprint": "50f4869158ebd3364f841f10f17264b2d8c400e417d48447b5fff57a21fb7ad8"
+  },
+  "/shows/gen-v/": {
+   "changed": "2026-11-18",
+   "fingerprint": "1f82f615a79eec67d2f0406ceb955b2463265b499dad870e1b267ddd92b6f414"
+  },
+  "/shows/gentleman-jack/": {
+   "changed": "2026-11-18",
+   "fingerprint": "537036c1aeb89d7c773e75fd974122b3d1350756cece04b4c6953af7033d4eef"
+  },
+  "/shows/ghosts-us/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6a3f71d9c6f6d45f65c47540fc8df342a18295b481d9e10710af91329984475c"
+  },
+  "/shows/glee/": {
+   "changed": "2026-11-18",
+   "fingerprint": "7324c3c0e9b7e9e9ae3af34067063c1102aac51c7dda3253f2e6fb6fe6595888"
+  },
+  "/shows/good-trouble/": {
+   "changed": "2026-11-18",
+   "fingerprint": "196a7feac8232995dd34d68bd4e0bc204d1a1ca84ab5b5a9df0fceb62e415e82"
+  },
+  "/shows/grace-and-frankie/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ecb47b8471ab3a05b07d1931930ced78da6019e23284e8777c8231b9b46760dc"
+  },
+  "/shows/greys-anatomy/": {
+   "changed": "2026-11-22",
+   "fingerprint": "138844cf73045555e32f85fcb5051ae5c8c47c306a57de8cacf9d5ad999b9b6a"
+  },
+  "/shows/grown-ish/": {
+   "changed": "2026-11-18",
+   "fingerprint": "0b23620e594ba077f6c65ec561835a18d4c947f7aac1e5416c0d82901ba204f1"
+  },
+  "/shows/hacks/": {
+   "changed": "2026-11-18",
+   "fingerprint": "004998c965fb120fac6d7ba6a7b04872062b1a04ea1543fa7f0ebc6084c269e4"
+  },
+  "/shows/harlem/": {
+   "changed": "2026-11-18",
+   "fingerprint": "a63339bc3f2b0464d5821468914eaf712bc5f7b1a475a6659e2bfc488145a499"
+  },
+  "/shows/harley-quinn/": {
+   "changed": "2026-11-18",
+   "fingerprint": "125881599da83deafcbb35154bb52a801c032d82a0a883afcf7f169d2033ed05"
+  },
+  "/shows/heartstopper/": {
+   "changed": "2026-11-18",
+   "fingerprint": "52ba4633dd766ff384675cbade11fda7cb1a4c7e2209d0e807024f08e91a9a55"
+  },
+  "/shows/helluva-boss/": {
+   "changed": "2026-11-18",
+   "fingerprint": "1537d64f8bfdca01ba24f995ec43bd41976d950065429bf3701baed509206fce"
+  },
+  "/shows/holby-city/": {
+   "changed": "2026-11-18",
+   "fingerprint": "5e0f54d907d5c7592977a0059ff911e7876b594fbbfc2bf92361931949051986"
+  },
+  "/shows/hollyoaks/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4854f2258e77ab080930425a1c87ed38a8748c8e7b84f00a832338cedc24fa5e"
+  },
+  "/shows/icarly/": {
+   "changed": "2026-11-18",
+   "fingerprint": "48ee7f9691a742ffa1368682637c4c0ded7b9df470e5249a39df0b70873191bc"
+  },
+  "/shows/jane-the-virgin/": {
+   "changed": "2026-11-18",
+   "fingerprint": "caa0c5e3aa1e4b45a50df2a971ea0d0eb957fa408f61dff0ab1e4c21711e5dd4"
+  },
+  "/shows/killing-eve/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b12ed8080afb4bc4fc206d5cfaba37a2ab0596e43d2d410f16a36655ad6bb166"
+  },
+  "/shows/law-order-special-victims-unit/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4858e912e15333b1f4bd322f800c158bbed8cd770484eee02832cf1c3e2b62d2"
+  },
+  "/shows/legacies/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4090700db1e620aa16f403e73a17aa67ea345f8f08e6fed719dde31909260c56"
+  },
+  "/shows/legends-of-tomorrow/": {
+   "changed": "2026-11-18",
+   "fingerprint": "337637ceb4845eb85bb0b11630724c5cc6b8bb66d07f728913441e8886f4bc2f"
+  },
+  "/shows/lost-girl/": {
+   "changed": "2026-11-18",
+   "fingerprint": "3d02e037ca2005b9ea1d92b92153f2cbbf2ddd28676625882df78d0b75cc0c1f"
+  },
+  "/shows/lovecraft-country/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b5316eb34a99ef99deb93e7171883bd407a98766c5db0bbcc25420b5d48fd21b"
+  },
+  "/shows/manifest/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4b9831b6d71e0b2f8c3c72ada30e4e57328d8eab0a1352962ced720b9143c4ac"
+  },
+  "/shows/midsomer-murders/": {
+   "changed": "2026-11-18",
+   "fingerprint": "0b645f636307da67860c64940408ea35bfdac01ca8c9d4bc02d72e6396c5e360"
+  },
+  "/shows/miss-fishers-murder-mysteries/": {
+   "changed": "2026-11-18",
+   "fingerprint": "2c0720adbaa60329fe90b33c1cf9f454f136188aa23fc051a7174303c982b0ae"
+  },
+  "/shows/murdoch-mysteries/": {
+   "changed": "2026-11-26",
+   "fingerprint": "49ceec97d7fe4857c9e49976963ccfeaa3e32e8ae3731d7267a4764d283b5b09"
+  },
+  "/shows/my-adventures-with-superman/": {
+   "changed": "2026-11-18",
+   "fingerprint": "facc4aca361ff517512cdf7f138fae46a9ac0171c378a0a4905a220dc89ab2ca"
+  },
+  "/shows/neighbours/": {
+   "changed": "2026-11-18",
+   "fingerprint": "e2c84e202b1ac27b233c49b85388ca396712b43e0090dde272904fa5b675114e"
+  },
+  "/shows/new-amsterdam/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6bdf0834d25c88ae2556607d60a70ddf9178b32bbb384723512b2180362967f0"
+  },
+  "/shows/new-girl/": {
+   "changed": "2026-11-18",
+   "fingerprint": "186c172ee77d3c57a2d828487a29dc23b5dabac2a8bd0fc5e6203fe52610f909"
+  },
+  "/shows/nip-tuck/": {
+   "changed": "2026-11-18",
+   "fingerprint": "00a9d706ccaaca6f67c9a1184f3db3b77aca8a437d7f77c3d2fd9bd81d5f0eb5"
+  },
+  "/shows/one-piece/": {
+   "changed": "2026-11-18",
+   "fingerprint": "331bbe7fba3e8568bd315437fe7c5eac73035630b78ae8da3f1f0b2ded976a0c"
+  },
+  "/shows/only-murders-in-the-building/": {
+   "changed": "2026-11-18",
+   "fingerprint": "3bc260369262cd81b359bb5690d0671b7ed046ef9106becbe909108e4d2ef420"
+  },
+  "/shows/orange-is-the-new-black/": {
+   "changed": "2026-11-18",
+   "fingerprint": "30afa7989bb9d4e295547e4f06f1b37710b83e9dccb8dfe8c6a882e79636ed1e"
+  },
+  "/shows/orphan-black/": {
+   "changed": "2026-11-18",
+   "fingerprint": "066af97040b42358d5f6fc9af6b68ab4bf0e83fd95fb70967f12b50fac87cd58"
+  },
+  "/shows/our-flag-means-death/": {
+   "changed": "2026-11-18",
+   "fingerprint": "30dd0b185739e1296f1059c95dfbb70da6460a502269a097401b47b1c852c515"
+  },
+  "/shows/pose/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6e35612c175f418ed7fea85e9b0103030ce02853eca906ad82dcf9cda0c51e6d"
+  },
+  "/shows/pretty-little-liars/": {
+   "changed": "2026-11-18",
+   "fingerprint": "c157f21d59be3f79070f2431813b74d1c9a484e8a77d60249b8bb0eea3d51fe0"
+  },
+  "/shows/q-force/": {
+   "changed": "2026-11-18",
+   "fingerprint": "9e5dcddbbbb34dc7d9e0de5bede64e9e448b96abd073ab03510c06a147fd02d5"
+  },
+  "/shows/queer-folk-us/": {
+   "changed": "2026-11-18",
+   "fingerprint": "478301b8d62f689f18afb516d20db7ffec19ec8fcc414885473d4e9c6ab83123"
+  },
+  "/shows/riverdale/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ba9f8eaf2cd5a26e2dcb8fa238b81e888d17b7cecde9f08ff8ee0da0175cc30f"
+  },
+  "/shows/rookie-blue/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4401ab0dad25e667190d892d8794cde6eb403664cc3e6d4d577c80a9bbbde6c0"
+  },
+  "/shows/scandal/": {
+   "changed": "2026-11-18",
+   "fingerprint": "da013a1d88730ba0b734f5b6c32868fa27dcc096b85a337cf2794598bb46b085"
+  },
+  "/shows/schitts-creek/": {
+   "changed": "2026-11-18",
+   "fingerprint": "a8f73e86a7066dec255e12a4f8353702019e91f65aa51124a630a6da50138e4d"
+  },
+  "/shows/sense8/": {
+   "changed": "2026-11-18",
+   "fingerprint": "38759ea04849ea49bb407859a6bdfd19473aea2d17a4dddcfa76f78227c6318a"
+  },
+  "/shows/sex-education/": {
+   "changed": "2026-11-18",
+   "fingerprint": "188461ed7b3dc659c3ea6bbff7faa92629fc0a8170eade9b11a872b7e4f4c2af"
+  },
+  "/shows/shadow-and-bone/": {
+   "changed": "2026-11-18",
+   "fingerprint": "3c6b0f71f246786f2d4f847c6d8a9ec2df99826bb9e7c9bd1f4b37d08aaa4fb7"
+  },
+  "/shows/shameless-us/": {
+   "changed": "2026-11-18",
+   "fingerprint": "60f47d7280e6dc7038585b0adf5f7e9790bb4419a94fcce1a62ac94929a3b140"
+  },
+  "/shows/shortland-street/": {
+   "changed": "2026-11-18",
+   "fingerprint": "7ca54d7ca2fd86cd41fce804db0eeab290d9e902128062d3cdb83172ed34c4d7"
+  },
+  "/shows/siren/": {
+   "changed": "2026-11-18",
+   "fingerprint": "1c6ef5eddb87e94e2754e3530c543065236bf3c9f862d4edf0ae2c861099deb1"
+  },
+  "/shows/snowpiercer/": {
+   "changed": "2026-11-18",
+   "fingerprint": "f89cdf7f54f62964a1455c38869efa811ad1ef900e0d26ecb35475b1c6ac63a4"
+  },
+  "/shows/station-19/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6f085edbdb88774acaccf6ff784ba79b597372c5b2ccf24ef2973d487b74f6df"
+  },
+  "/shows/supergirl/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ae86939c762bca004d213fe728d750ead196c8832bab73efdbb0ab6bf8d99efb"
+  },
+  "/shows/supernatural/": {
+   "changed": "2026-11-18",
+   "fingerprint": "8d9d1aa37cad91e3eb0c5c492fa6a5f3ee86bce642e2dfcc0ae8d234f8c37147"
+  },
+  "/shows/survivors-remorse/": {
+   "changed": "2026-11-18",
+   "fingerprint": "3d9091a8b0fc7acf00b98c2387e4b1e4ecdd8de29a605bb8c2c46ba3e35d585a"
+  },
+  "/shows/swat/": {
+   "changed": "2026-11-18",
+   "fingerprint": "bdd620d41484c6db936fd5baa7f737c00385df288ad5d2d241e302d80a0fa749"
+  },
+  "/shows/the-100/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ec3f38853caf3aca2b0e041be46ad7868ea4dc3b7235a4c55eed0e283c967e9d"
+  },
+  "/shows/the-blacklist/": {
+   "changed": "2026-11-18",
+   "fingerprint": "a58dd2042b5bfa0153f1275a2342883a022159f68c4b4d3fad3b50b3bbda90c8"
+  },
+  "/shows/the-bold-type/": {
+   "changed": "2026-11-18",
+   "fingerprint": "40c491939b3ff3b0b7dea65865a5d874b5806dd31288b12d083f71a6d1a57337"
+  },
+  "/shows/the-boys/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b70b0df23eef8836e61e125052ccc5ec7f026106a6ecd776f86de0ab2eb5a543"
+  },
+  "/shows/the-brokenwood-mysteries/": {
+   "changed": "2026-11-18",
+   "fingerprint": "152061834dc88f361abf7073e2db90cbff286cc32279d287c3b6140e73a9013c"
+  },
+  "/shows/the-chi/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6e0e21250ed9f83fdac450b77c5f9be66a6a5b8c56c08b89fb13bb6770040b63"
+  },
+  "/shows/the-deuce/": {
+   "changed": "2026-11-18",
+   "fingerprint": "804ba93d82ae792d5247eb2360f94f51565863053083d6c07672d63db1efd623"
+  },
+  "/shows/the-dragon-prince/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b7476412771ba779440909610dd8b8b47f821f42ff962b69577532dd15a41090"
+  },
+  "/shows/the-expanse/": {
+   "changed": "2026-11-18",
+   "fingerprint": "43a67cff932970bbfc4ef7dc9b49971a157afa9bacd6f96c64ab945e87e2503c"
+  },
+  "/shows/the-fall-of-the-house-of-usher/": {
+   "changed": "2026-11-18",
+   "fingerprint": "851b47508bf00d255c216646afb5a5f9e05bdbb3a3b71662b0c9dd33afe147b9"
+  },
+  "/shows/the-flash/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b1d0f2c09a6af4f1cda217b83074b7f61ba25eda01c19cb5b8d4090d815d1958"
+  },
+  "/shows/the-fosters/": {
+   "changed": "2026-11-18",
+   "fingerprint": "9347fb3457b967c964c518b4a9f75b2e1757830cc5d336359387cb226c3afdca"
+  },
+  "/shows/the-girlfriend-experience/": {
+   "changed": "2026-11-18",
+   "fingerprint": "536bc02df625026c305eea07589503e2250f47a608ce0b7bf22f13b7ad09bdcf"
+  },
+  "/shows/the-good-doctor/": {
+   "changed": "2026-11-22",
+   "fingerprint": "f9e323d06123d9c7eb9df82f84ac6f1c410ed27fbaec2aadf6e56f1e6a67dc5e"
+  },
+  "/shows/the-good-wife/": {
+   "changed": "2026-11-18",
+   "fingerprint": "cd12ac50e7ad396669d0cd67ea890b028695005ce046f671059b4eadf9eda1a1"
+  },
+  "/shows/the-handmaids-tale/": {
+   "changed": "2026-11-18",
+   "fingerprint": "fcf5700336ecab30e7f0fd62fbcd3ead83e5f3732ea5504b330a4c39c5017136"
+  },
+  "/shows/the-l-word-generation-q/": {
+   "changed": "2026-11-18",
+   "fingerprint": "cb8fe7d80144aa38747e046b994521fbb112b416921dd3b3ea00f8d0ca257eac"
+  },
+  "/shows/the-l-word/": {
+   "changed": "2026-11-18",
+   "fingerprint": "f72d5a38599022a1c4fd5d3083daabb695587207a9be875031ce70dbe94a0824"
+  },
+  "/shows/the-last-of-us/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ee0065d8727b2c988c2af77e992344ed2561704476141f219400fb6506b77c03"
+  },
+  "/shows/the-loud-house/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ddfdb9ee6592fc49b65e1bbc12c9ccaf0abec3c8bca915db7bd6c596a75735c9"
+  },
+  "/shows/the-mentalist/": {
+   "changed": "2026-11-18",
+   "fingerprint": "6bdbb09187be3e75890a0bfc3db78ea15dbf386d8506300f2d6fa203029081b3"
+  },
+  "/shows/the-mighty-nein/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ade545b360008357a3e522a3f92afd1d07ccf3deff515c23a66c6caa78fdda74"
+  },
+  "/shows/the-mindy-project/": {
+   "changed": "2026-11-18",
+   "fingerprint": "c1b21537807d83a14a062d1bde9a97e59e0eb6ae2e41b130a9a8227a0711f243"
+  },
+  "/shows/the-morning-show/": {
+   "changed": "2026-11-18",
+   "fingerprint": "4874c85ccb84c619f9ddf885f593d313fdbf4ed8e137eb5e88b42db1a62e0f5a"
+  },
+  "/shows/the-owl-house/": {
+   "changed": "2026-11-22",
+   "fingerprint": "1efa900ab6b6996f51097872ba7af5ce588072d8b367a0e9817533a070be5196"
+  },
+  "/shows/the-pitt/": {
+   "changed": "2026-11-26",
+   "fingerprint": "2cd08adfec2afd28f3730a1c5c3045a4ab7f1bef0525f504e92b1519dbc98d00"
+  },
+  "/shows/the-rookie-feds/": {
+   "changed": "2026-11-18",
+   "fingerprint": "8f70036303c6ee44be464d33252ccc098e52b15dfcd17a19be171e0d8e07b022"
+  },
+  "/shows/the-simpsons/": {
+   "changed": "2026-11-23",
+   "fingerprint": "4ef86186452e18e8c793ca6276ea4db75a8fe2903dde9a6017389526bfb89c0f"
+  },
+  "/shows/the-vampire-diaries/": {
+   "changed": "2026-11-18",
+   "fingerprint": "0101935cff2449fa65bae20b5222cfadaf35f9ce9ad99893ab6986df2be59ca9"
+  },
+  "/shows/the-walking-dead/": {
+   "changed": "2026-11-18",
+   "fingerprint": "a273723f8a34c5c9e191dbe093daa0d99cdb82ebbe1713ba566028b8680e2a0b"
+  },
+  "/shows/the-wire/": {
+   "changed": "2026-11-18",
+   "fingerprint": "8fcb49d5c611af4da24132f50de72e55a393849bee0f75637041f0958b6247f4"
+  },
+  "/shows/transparent/": {
+   "changed": "2026-11-18",
+   "fingerprint": "88b4cf4659e4c3792ab4eb11805489cc45f9bcd703325b33adf113abd455fffd"
+  },
+  "/shows/true-blood/": {
+   "changed": "2026-11-18",
+   "fingerprint": "b29210ad78c4d90267c7a6031b9cee6b2c5bd91a61cdeaf50e675da8478af64f"
+  },
+  "/shows/tuca-bertie/": {
+   "changed": "2026-11-18",
+   "fingerprint": "2bc39f810e2588ce0b6e1f98d1e45725acf0323838dabe6413120966b64ed6f4"
+  },
+  "/shows/two-and-a-half-men/": {
+   "changed": "2026-11-18",
+   "fingerprint": "59a090b3394239b0776f956954a2e14c4e6ab59af0c2ce0f28a3d093a72980b1"
+  },
+  "/shows/van-helsing/": {
+   "changed": "2026-11-22",
+   "fingerprint": "258be7c9a2c79bd5d43099f573d15c1f6d145eeb062e34ca1b711243afd182f4"
+  },
+  "/shows/vida/": {
+   "changed": "2026-11-18",
+   "fingerprint": "8c6132acdf24f2106ff139011a87506987f4adcc716b154561b312c1fe0180e0"
+  },
+  "/shows/vis-a-vis/": {
+   "changed": "2026-11-18",
+   "fingerprint": "106c8d551d723bdaf0bf93273d8483859c4660f4f40dfbcad3ea92f2ac5c4ea2"
+  },
+  "/shows/warrior-nun/": {
+   "changed": "2026-11-18",
+   "fingerprint": "be81b8ed5f98e2ac0531e8c7e6267f4b6c5d534a3104f551b096c9dd074db3cb"
+  },
+  "/shows/wentworth/": {
+   "changed": "2026-11-18",
+   "fingerprint": "2493064098f9cbaef45a0177eb2bd588cd9fa9e101c938673a3572cc6275dfd1"
+  },
+  "/shows/why-women-kill/": {
+   "changed": "2026-11-18",
+   "fingerprint": "7aeb0c3c476d9cca59c02246e2fc5e0704eebe4c257aaeb01fb8eed324a2a4c4"
+  },
+  "/shows/will-trent/": {
+   "changed": "2026-11-18",
+   "fingerprint": "7d2c4b7b141e351eb6d3d421af344dc699ebb9f3e5866457cbc9cd14c947b272"
+  },
+  "/shows/wynonna-earp/": {
+   "changed": "2026-11-18",
+   "fingerprint": "ba4ee88c33fa0f7c45545b31e4f71d8b8f57c4cb5c1417f6b2a00c0d9a3fd5bb"
+  },
+  "/shows/yellowjackets/": {
+   "changed": "2026-11-28",
+   "fingerprint": "421c4e5ab75f094bc52b0c1113f1e57137cb8692d24b7f25625ff5c65422764e"
+  }
+ },
+ "schema": 1
+}
